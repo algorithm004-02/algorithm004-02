@@ -1,5 +1,6 @@
-# NOTE
-本周先看了，LRU 的JAVA 版本，参考着写了python 版本的；
+﻿# NOTE
+2019-10-13 
+一、本周先看了，LRU 的JAVA 版本，参考着写了python 版本的；
 
 感觉就是再写一个2维 的算法，不仅要注意hash 里面的实现，还要实现双向链表。
 
@@ -8,10 +9,64 @@
 这样，字典的长度，就是LRU 的长度了。
 
 
-而后开始做第26 题，发现如果在遍历中，改变数组的长度，就有问题，
+二、而后开始做leetcode第26 题，发现如果在遍历中，改变数组的长度，就有问题，
 
 如果用while 循环来，就需要try 来处理；
 
 所以，想到了双指针方法，因为是已经排好序的数组，这个很重要
-  
+
+2019-10-14 ,
+一、今天看了本周的第一个视频，感觉跳表，讲的比王争老师多了一些，我对跳表的理解也有进步，只是每次插入删除，涉及到了维护索引，也是有成本的。
+而老师说的升维和空间换时间，真的有体会。
+
+二、我按照老师说的，看了JAVA 的源码
+ 220:   public int indexOf(Object e)
+ 221:   {
+ 222:     for (int i = 0; i < size; i++)
+ 223:       if (equals(e, data[i]))
+ 224:         return i;
+ 225:     return -1;
+ 226:   }
+
+这里，我们可以清楚的看到，e 是否在ArrayList中，是需要遍历的
+
+ 354:   public void add(int index, E e)
+ 355:   {
+ 356:     checkBoundInclusive(index);
+ 357:     modCount++;
+ 358:     if (size == data.length)
+ 359:       ensureCapacity(size + 1);
+ 360:     if (index != size)
+ 361:       System.arraycopy(data, index, data, index + 1, size - index);
+ 362:     data[index] = e;
+ 363:     size++;
+ 364:   }
+在这几行代码中，看到了边界检查，扩容，整体后移靠复制，定点插入不简单。
+
+三、在学习  LinkedList<AnyType> 这个里面，比较震撼的是这三个复制，时间复杂度差别大。 
+
+/**
+   *  Returns a deep copy of the list
+   *  Complexity: O(n^2)
+   */
+   public  LinkedList<AnyType> copy1()
+   {
+      LinkedList<AnyType> twin = new LinkedList<AnyType>();
+      Node<AnyType> tmp = head;
+      while(tmp != null)
+      {
+         twin.addLast( tmp.data );  #这里addLast 是O(n)
+         tmp = tmp.next;
+      }
+
+      return twin;
+   }
+
+还有一个细节，在声明Node 中赋值this.next
+   public void addFirst(AnyType item)
+   {
+      head = new Node<AnyType>(item, head);
+   }
+
+public boolean removeLastOccurrence(Object o) 这个是从后面开始搜，搜到就删除。  
 
