@@ -46,4 +46,5 @@ delete|O(1)?
 **各种搜索结构提高效率的方式都是通过空间换时间得到的。**
 
 [跳表──没听过但很犀利的数据结构](https://lotabout.me/2018/skip-list/)
+
 [Redis 为什么用跳表而不用平衡树？](https://juejin.im/post/57fa935b0e3dd90057c50fbc)
