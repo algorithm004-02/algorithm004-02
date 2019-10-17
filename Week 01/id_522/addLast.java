@@ -1,4 +1,4 @@
-
+﻿
 
 
 public class DequeDemo {
@@ -10,13 +10,13 @@ public class DequeDemo {
         deque.addLast("c");
         System.out.println(deque);
 
-        //获取栈首元素后，元素不会出栈
+        //peekFirst获取栈首元素后，元素不会出栈
         String str = deque.peekFirst();
         System.out.println(str);
         System.out.println(deque);
 
         while(deque.size() > 0) {
-            //获取栈首元素后，元素将会出栈
+            //removeFirst获取栈首元素后，元素将会出栈
             System.out.println(deque.removeFirst());
         }
         System.out.println(deque);
