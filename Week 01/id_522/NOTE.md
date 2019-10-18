@@ -132,5 +132,9 @@ The value returned may be larger than the item added. If that isn’t desired, c
 
 4、所谓提高了，就是见识了高手是怎么干的，原来还可以这么干，扩展了自己的知识边界。
 
+5、我也想到过，除了if else ，for while ，再就是递归，但听超哥一说，豁然开朗。
+
+6.超哥，真是肺腑之言。
+
 
 
