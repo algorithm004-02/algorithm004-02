@@ -68,5 +68,21 @@
       head = new Node<AnyType>(item, head);
    }
 
-public boolean removeLastOccurrence(Object o) 这个是从后面开始搜，搜到就删除。  
+public boolean removeLastOccurrence(Object o) 这个是从后面开始搜，搜到就删除。 
+
+
+
+
+2019-10-18 
+
+昨天把视频都看完了，预习题目，加上实战题目加作业，感觉压力山大。
+
+先是按照老师的做法，看了java 的Queue ，这是一个接口。
+比较值得关注的是，remove() 和 poll() ,都是去掉左边的头结点。而peek element 不是，只是查看
+
+
+对于源码分析 PriorityQueue
+PriorityQueue是非线程安全的，所以Java提供了PriorityBlockingQueue（实现BlockingQueue接口）用于Java多线程环境。如果一个用户类Customer，它没有提供任何类型的排序。当我们用它建立优先队列时，应该为其提供一个比较器Comparator对象。
+
+ 
 
