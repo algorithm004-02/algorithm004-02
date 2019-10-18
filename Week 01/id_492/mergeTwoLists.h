@@ -1,5 +1,7 @@
 #include <iostream>
 
+// 合并两个有序链表
+
 struct ListNode {
     int val;
     ListNode *next;
