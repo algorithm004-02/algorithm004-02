@@ -57,8 +57,10 @@ var rotate = function(nums, k) {
     nums.unshift(...nums.splice(nums.length - k));
     // nums.unshift(...nums.splice(nums.length-k, k))
     // 解法2
+
     // nums.splice(0,0,...nums.splice(nums.length-k, k))
     // 解法3
+    
     // for (let i = 0; i < k; i++) {
     //     nums.unshift(nums.pop());
     // }
