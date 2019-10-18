@@ -1,4 +1,5 @@
 ﻿# NOTE
+
 2019-10-13 
 一、本周先看了，LRU 的JAVA 版本，参考着写了python 版本的；
 
@@ -134,7 +135,7 @@ The value returned may be larger than the item added. If that isn’t desired, c
 
 5、我也想到过，除了if else ，for while ，再就是递归，但听超哥一说，豁然开朗。
 
-6.超哥，真是肺腑之言。
+6、超哥，真是肺腑之言。
 
 
 

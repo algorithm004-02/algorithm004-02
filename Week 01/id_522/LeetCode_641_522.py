@@ -4,7 +4,7 @@ class MyCircularDeque:
         """
         Initialize your data structure here. Set the size of the deque to be k.
         """
-        self.sizelimit = k
+        self.sizelimit = k 
         
         self.que=[]
 

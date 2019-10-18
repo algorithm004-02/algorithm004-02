@@ -1,6 +1,4 @@
-
-
-class Solution:
+﻿class Solution:
     #def trap(self, height: List[int]) -> int:
     def trap(self, height) :
         if not height: return 0
