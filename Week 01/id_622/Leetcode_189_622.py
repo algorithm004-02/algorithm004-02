@@ -80,3 +80,46 @@ class Solution:
             start += 1
             end -= 1
         return nums
+
+    def rotate(self, nums, k):
+        """
+        :type nums: List[int]
+        :type k: int
+        :rtype: void Do not return anything, modify nums in-place instead.
+        """
+        """
+        国际站解法，先抄下来。。。。
+        """
+        n, k, j = len(nums), k % len(nums), 0
+        while n > 0 and k % n != 0:
+            for i in xrange(0, k):
+                nums[j + i], nums[len(nums) - k + i] = nums[len(nums) - k + i], nums[j + i] # swap
+            n, j = n - k, j + k
+            k = k % n
+
+    def rotate(self, nums: List[int], k: int) -> None:
+        """
+        Do not return anything, modify nums in-place instead.
+        """
+        # 一开始len(nums)没有赋值给n，变为128ms，赋值以后78ms
+        n = len(nums)
+        k = k % n
+        if k == 0: return
+        count = 0
+        start = 0
+        prev = nums[0]
+        
+        while count < n:
+            next = (start + k) % n
+            
+            while start != next:
+                nums[next], prev = prev, nums[next]
+                next = (next + k) % n
+                count += 1
+
+            nums[next] = prev
+            start += 1
+            prev = nums[start]
+            count += 1
+        return nums
+                
