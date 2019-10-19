@@ -1,4 +1,4 @@
-package LeetCode
+package leetcode
 
 func plusOne1(digits []int) []int {
 	for i := len(digits) - 1; i >= 0; i-- {
@@ -6,10 +6,9 @@ func plusOne1(digits []int) []int {
 			// 当前位置不用进位，+1，然后直接返回
 			digits[i]++
 			return digits
-		} else {
-			// 要进位，当前位置置0
-			digits[i] = 0
 		}
+		// 要进位，当前位置置0
+		digits[i] = 0
 	}
 	return append([]int{1}, digits...)
 }

@@ -15,6 +15,8 @@ func TestLeetCode15(t *testing.T) {
 	nums := []int{-1, 0, 1, 2, -1, -4}
 	fmt.Println(threeSum1(nums))
 	fmt.Println(threeSum2(nums))
+	fmt.Println(threeSum3(nums))
+	fmt.Println(threeSum4(nums))
 }
 
 func TestLeetCode70(t *testing.T) {

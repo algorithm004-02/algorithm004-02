@@ -1,4 +1,4 @@
-package LeetCode
+package leetcode
 
 import "sort"
 
@@ -71,14 +71,32 @@ func merge5(nums1 []int, m int, nums2 []int, n int) {
 	for len1 >= 0 && len2 >= 0 {
 		if nums1[len1] > nums2[len2] {
 			nums1[length] = nums1[len1]
-			len1 -= 1
+			len1--
 		} else {
 			nums1[length] = nums2[len2]
-			len2 -= 1
+			len2--
 		}
-		length -= 1
+		length--
 	}
 	// nums1 = append(nums2[:len2+1], nums1[len2+1:]...) 这种方式就有问题
 	nums3 := append(nums2[:len2+1], nums1[len2+1:]...)
 	nums1 = append(nums1[:0], nums3...)
+}
+
+// 双指针优化
+func merge6(nums1 []int, m int, nums2 []int, n int) {
+	i, j, k := m-1, n-1, m+n-1
+	for i >= 0 && j >= 0 {
+		if nums1[i] > nums2[j] {
+			nums1[k] = nums1[i]
+			i, k = i-1, k-1
+		} else {
+			nums1[k] = nums2[j]
+			j, k = j-1, k-1
+		}
+	}
+	for j >= 0 {
+		nums1[k] = nums2[j]
+		j, k = j-1, k-1
+	}
 }

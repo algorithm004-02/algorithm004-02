@@ -1,4 +1,4 @@
-package LeetCode
+package leetcode
 
 // 双指针法
 // 时间复杂度：O(n)，假设数组的长度是n，那么k和i分别最多遍历n步

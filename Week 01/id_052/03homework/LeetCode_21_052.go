@@ -1,5 +1,6 @@
-package LeetCode
+package leetcode
 
+// ListNode 链表结构体
 type ListNode struct {
 	Val  int
 	Next *ListNode
@@ -18,10 +19,10 @@ func mergeTwoLists(l1 *ListNode, l2 *ListNode) *ListNode {
 	if l1.Val < l2.Val {
 		l1.Next = mergeTwoLists(l1.Next, l2)
 		return l1
-	} else {
-		l2.Next = mergeTwoLists(l1, l2.Next)
-		return l2
 	}
+	l2.Next = mergeTwoLists(l1, l2.Next)
+
+	return l2
 }
 
 // 迭代

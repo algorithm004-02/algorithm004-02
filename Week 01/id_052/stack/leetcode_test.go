@@ -2,6 +2,7 @@ package LeetCode
 
 import (
 	"fmt"
+	"github.com/stretchr/testify/assert"
 	"testing"
 )
 
@@ -29,6 +30,8 @@ func TestLeetCode20(t *testing.T) {
 }
 
 func TestLeetCode155(t *testing.T) {
+	ast := assert.New(t)
+
 	s := Constructor()
 
 	s.Push(-2)
@@ -37,57 +40,39 @@ func TestLeetCode155(t *testing.T) {
 	// [-2, 0]
 	s.Push(-3)
 	// [-2, 0, -3]
-	if actual:=  s.GetMin(); actual != -3 {
-		t.Errorf("get min from [-2, 0, -3] 测试失败;")
-	}
+	ast.Equal(-3, s.GetMin(), "get min from [-2, 0, -3]")
 	// [-2, 0, -3]
 	s.Pop()
 	// [-2, 0]
-	if actual:=  s.Top(); actual != 0 {
-		t.Errorf("get top from [-2, 0] 测试失败;")
-	}
+	ast.Equal(0, s.Top(), "get top from [-2, 0]")
 	// [-2, 0]
-	if actual:=  s.GetMin(); actual != 0 {
-		t.Errorf("get min from [-2, 0] 测试失败;")
-
-	}
+	ast.Equal(-2, s.GetMin(), "get min from [-2, 0]")
 	// [-2, 0]
 	s.Push(-1)
 	// [-2, 0, -1]
-	if actual:=  s.GetMin(); actual != -2 {
-		t.Errorf("get min from [-2, -1, 0] 测试失败;")
-	}
+	ast.Equal(-2, s.GetMin(), "get min from [-2, -1, 0]")
 	// [-2, 0, -1]
-	if actual:=  s.Top(); actual != -1 {
-		t.Errorf("get top from [-2, -1, 0] 测试失败;")
-	}
+	ast.Equal(-1, s.Top(), "get top from [-2, -1, 0]")
 	// [-2, 0, -1]
 	s.Pop()
 	// [-2, 0]
-	if actual:=  s.GetMin(); actual != -2 {
-		t.Errorf("get top from [0, -1] 测试失败;")
-	}
+	ast.Equal(-2, s.GetMin(), "get top from [0, -1]")
 }
 
 func TestLeetCode84(t *testing.T) {
+	ast := assert.New(t)
 	heights := []int{2, 1, 5, 6, 2, 3}
-	if actual:=  largestRectangleArea(heights); actual != 10 {
-		t.Errorf("测试失败;")
-	}
-	if actual:=  largestRectangleArea1(heights); actual != 10 {
-		t.Errorf("测试失败;")
-	}
-	if actual:=  largestRectangleArea2(heights); actual != 10 {
-		t.Errorf("测试失败;")
-	}
+	ast.Equal(largestRectangleArea(heights), 10)
+	ast.Equal(largestRectangleArea1(heights), 10)
+	ast.Equal(largestRectangleArea2(heights), 10)
 }
-//
-//func TestLeetCode239(t *testing.T) {
-//	ast := assert.New(t)
-//	nums := []int{1, 3, -1, -3, 5, 3, 6, 7}
-//	k := 3
-//	result := []int{3, 3, 5, 5, 6, 7}
-//	ast.Equal(maxSlidingWindow(nums, k), result)
-//	ast.Equal(result, maxSlidingWindow2(nums, k))
-//	ast.Equal(result, maxSlidingWindow3(nums, k))
-//}
+
+func TestLeetCode239(t *testing.T) {
+	ast := assert.New(t)
+	nums := []int{1, 3, -1, -3, 5, 3, 6, 7}
+	k := 3
+	result := []int{3, 3, 5, 5, 6, 7}
+	ast.Equal(maxSlidingWindow(nums, k), result)
+	ast.Equal(result, maxSlidingWindow2(nums, k))
+	ast.Equal(result, maxSlidingWindow3(nums, k))
+}

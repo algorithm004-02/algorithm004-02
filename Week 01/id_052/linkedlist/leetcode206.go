@@ -44,3 +44,14 @@ func reverse(pre, cur *ListNode) *ListNode {
 	cur.Next = pre
 	return head
 }
+
+func reverseList4(head *ListNode) *ListNode {
+	cur, pre := head, &ListNode{} // pre 是所有已经逆转的节点
+	for cur != nil {              // cur 是当前被逆转的节点
+		next := cur.Next // 先保存下一个节点
+		cur.Next = pre   // 逆转当前节点，使当前节点指向前一个节点
+		pre = cur        // 该节点已经完成逆转
+		cur = next       // 下一个将被逆转的节点
+	}
+	return pre // 返回完成逆转之后的头节点
+}
