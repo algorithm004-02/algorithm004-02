@@ -19,9 +19,10 @@ func moveZeroes(nums []int) {
 		arr = append(arr, 0)
 	}
 	// 3. 把arr赋值给nums
-	for i := 0; i < len(nums); i++ {
-		nums[i] = arr[i]
-	}
+	//for i := 0; i < len(nums); i++ {
+	//	nums[i] = arr[i]
+	//}
+	nums = append(nums[:0], arr...)
 }
 
 // 2. 在数组中原地操作 时间复杂度O(n),空间复杂度O(1)

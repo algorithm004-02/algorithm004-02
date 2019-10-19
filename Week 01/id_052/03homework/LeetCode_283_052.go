@@ -1,4 +1,4 @@
-package LeetCode
+package leetcode
 
 // 1. 构造新的数组
 // 执行用时 : 88 ms, 在所有 golang 提交中击败了 96.14% 的用户

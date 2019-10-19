@@ -1,27 +1,39 @@
 package LeetCode
 
-// 方法一：前端循环暴力破解
+// 方法一：循环暴力破解，枚举left bar x, right bar y, (y-x)*左右较小的height
 // 执行用时 : 728 ms, 在所有 golang 提交中击败了 9.82% 的用户
 // 内存消耗 : 5.6 MB, 在所有 golang 提交中击败了 65.35% 的用户
 func maxArea(height []int) int {
-	max := 0 // 记录最大容量
+	area := 0 // 记录最大容量
 	for i := 0; i < len(height); i++ {
 		for j := i + 1; j < len(height); j++ {
 			if height[i] < height[j] {
-				if max < height[i]*(j-i) {
-					max = height[i] * (j - i)
+				if area < height[i]*(j-i) {
+					area = height[i] * (j - i)
 				}
 			} else {
-				if max < height[j]*(j-i) {
-					max = height[j] * (j - i)
+				if area < height[j]*(j-i) {
+					area = height[j] * (j - i)
 				}
 			}
 		}
 	}
-	return max
+	return area
 }
 
-// 方法二：双指针
+// 优化
+func maxArea_(height []int) int {
+	maxArea := 0 // 记录最大容量
+	for i := 0; i < len(height)-1; i++ {
+		for j := i + 1; j < len(height); j++ {
+			area := (j - i) * min(height[i], height[j])
+			maxArea = max(maxArea, area)
+		}
+	}
+	return maxArea
+}
+
+// 方法二：双指针，左右边界向中间收敛，左右夹逼
 // 执行用时 : 16 ms , 在所有 golang 提交中击败了 91.98% 的用户
 // 内存消耗 : 5.6 MB , 在所有 golang 提交中击败了 65.35% 的用户
 func maxArea2(height []int) int {

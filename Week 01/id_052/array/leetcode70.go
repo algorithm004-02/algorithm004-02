@@ -43,6 +43,23 @@ func climbStairs3(n int) int {
 	}
 }
 
+func climbStairs5(n int) int {
+	if n < 2 {
+		return 1
+	}
+	return climbStairsRecursive(n-1) + climbStairsRecursive(n-2)
+}
+
+func climbStairsRecursive(n int) int {
+	first, second := 1, 1
+	for i := 1; i < n; i++ {
+		third := first + second
+		first = second
+		second = third
+	}
+	return second
+}
+
 // 标签：动态规划
 // 本问题其实常规解法可以分成多个子问题，爬第n阶楼梯的方法数量，等于 2 部分之和
 //   1. 爬上 n−1 阶楼梯的方法数量。因为再爬1阶就能到第n阶

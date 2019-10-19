@@ -1,4 +1,4 @@
-package LeetCode
+package leetcode
 
 // 方法一: 构造栈来拼接数组
 // https://leetcode-cn.com/problems/rotate-array/solution/gou-zao-yi-ge-zhan-lai-jie-jue-by-custergo/

@@ -42,7 +42,7 @@ func largestRectangleArea1(heights []int) int {
 		return 0
 	}
 	max, n := 0, len(heights)
-	st := []int{}
+	var st []int
 	for r := 0; r <= n; r++ {
 		h := 0      // r==n右边界越界，高度设为0
 		if r != n { // 右边界不越界，取高度值

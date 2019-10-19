@@ -1,4 +1,4 @@
-package LeetCode
+package leetcode
 
 // 查找表
 func twoSum(nums []int, target int) []int {
