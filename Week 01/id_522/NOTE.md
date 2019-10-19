@@ -139,3 +139,52 @@ The value returned may be larger than the item added. If that isn’t desired, c
 
 
 
+关于review 别人的代码
+
+1 我看了，617 的代码，两个数之和，提了一个修改建议。
+
+2 看了，377 的代码，21 题和26题，完美。
+
+3 看了062的代码，对splice 这个函数，不是理解，提出个问题，splice 在数组循环中，修改数组，长度会变化的，影响nums.length ？
+
+
+4 看了577 的代码，针对移动0 ，提出了一个改进建议，
+接雨水 42 题
+for (left<=right){
+这里提一个改进建议，是不是可以把= 去掉，我测试了一下，可以。
+for (left < right){
+
+5 我看了052 的代码 ，太多了，太优秀了，只看了6个代码
+
+对反转数组，用双指针法，还是half 循环，提出了哪个最优的想法
+
+func reverse(nums []int) { // 翻转数组
+ @luanjerry
+luanjerry Member Pending
+`
+
+    chang=len(nums)
+    if chang<2:return
+    def swap(a,left,right):
+        #size=right -left +1
+        #half =size//2
+        half=(right -left +1)//2
+        for k in range(half):
+            a[left+k],a[right-k]=a[right-k],a[left+k]
+`
+
+@luanjerry	--------------------------
+	i, j := 0, len(nums)-1
+	for i < j {   //左右指针法
+		nums[i], nums[j] = nums[j], nums[i]
+		i++
+		j--
+	}
+}
+
+
+
+
+
+
+
