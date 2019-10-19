@@ -1,4 +1,5 @@
 package app;
+
 /*
  * @lc app=leetcode id=1 lang=java
  *
@@ -10,7 +11,7 @@ class Solution {
     /**
      * 暴力法双指针求解
      * 时间复杂度O(n^2)
-     * 空间复杂度O(n)
+     * 空间复杂度O(1)
      * @param numbers
      * @param target
      * @return
