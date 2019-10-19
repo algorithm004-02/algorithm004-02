@@ -1,4 +1,4 @@
-public class RotateArray {
+public class LeetCode_189_047 {
     public void rotate(int[] nums, int k) {
         if (nums == null || nums.length == 0) {
             return;
