@@ -1,4 +1,4 @@
-package app;
+package app.homework;
 
 /*
  * @lc app=leetcode id=189 lang=java
@@ -51,13 +51,38 @@ package app;
 // @lc code=start
 class Solution {
     /**
+     * 使用双指针3次翻转数组
+     * 时间复杂度O(n)
+     * 空间复杂度O(1)
+     * @param nums
+     * @param k
+     */
+    public void rotate(int[] nums, int k) {
+        k = k % nums.length;
+        reverseArray(nums, 0, nums.length - 1);
+        reverseArray(nums, 0, k - 1);
+        reverseArray(nums, k, nums.length - 1);
+
+    }
+
+    public void reverseArray(int[] nums, int start, int end ) { 
+        while (start < end) {
+            int temp = nums[start];
+            nums[start] = nums[end];
+            nums[end] = temp;
+            end--;
+            start++;
+        }
+    }
+
+    /**
      * 暴力法,移动(k%nums.length)次
      * 时间复杂度O(n * k)
      * 空间复杂度O(1)
      * @param nums
      * @param k
      */
-    public void rotate(int[] nums, int k) {
+    public void rotate_by_bruce(int[] nums, int k) {
         k = k % nums.length;
         for (; k > 0; k--) {
             for (int i = nums.length - 1; i > 0; i--) {

@@ -1,4 +1,4 @@
-package app;
+package app.homework;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -55,6 +55,26 @@ class Solution {
         }
         return new int [] {-1,-1};
     }
+
+    /**
+     * 暴力法双指针求解
+     * 时间复杂度O(n^2)
+     * 空间复杂度O(1)
+     * @param numbers
+     * @param target
+     * @return
+     */
+    public int[] twoSum_by_bruce(int[] numbers, int target) {
+        for (int i = 0; i < numbers.length - 1; i++) {
+            for (int j = i+1; j< numbers.length; j++) {
+                if (numbers[i] + numbers[j] == target) {
+                    return new int[]{i,j};
+                }
+            }
+        }
+        return new int[]{-1,-1};
+    }
+
 }
 // @lc code=end
 

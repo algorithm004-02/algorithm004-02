@@ -1,4 +1,4 @@
-package app;
+package app.homework;
 
 /*
  * @lc app=leetcode id=66 lang=java

@@ -1,4 +1,4 @@
-package app;
+package app.homework;
 
 /*
  * @lc app=leetcode id=88 lang=java
@@ -59,6 +59,40 @@ class Solution {
         }
         //如果n<m && len2==-1,就不会拷贝
         System.arraycopy(nums2, 0, nums1, 0, len2 + 1);
+    }
+
+    /**
+     * 从nums1的m下标位置填充nums2的n个元素，
+     * 对nums1的m+n个元素进行排序
+     * 可以使用冒泡、插入、选择排序；时间复杂度O(n^2),空间复杂度O(n)
+     * 或者使用归并，快速排序；时间复杂度O(nlogn),空间复杂度O(n^2),O(n)
+     * @param nums1
+     * @param m
+     * @param nums2
+     * @param n
+     */
+    public void merge_by_bubbleSort(int[] nums1, int m, int[] nums2, int n) {
+        for (int i = 0; i < n; i++) {
+            nums1[m+i] = nums2[i];
+        }
+        bubbleSort(nums1, m+n);
+    }
+
+    /**
+     * 冒泡排序
+     * @param nums
+     * @param size
+     */
+    public void bubbleSort(int[] nums, int size) {
+        for (int i = 0; i < size - 1; i++) {
+            for (int j = i + 1; j < size; j++) {
+                if (nums[i] > nums[j]) {
+                    int temp = nums[i];
+                    nums[i] = nums[j];
+                    nums[j] = temp;
+                }
+            }
+        }
     }
 }
 // @lc code=end

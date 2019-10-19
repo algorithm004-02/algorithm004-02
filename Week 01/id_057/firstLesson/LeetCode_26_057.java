@@ -1,4 +1,4 @@
-package app;
+package app.homework;
 
 /*
  * @lc app=leetcode id=26 lang=java
@@ -82,6 +82,33 @@ class Solution {
             } 
         }
         return i+1;
+    }
+
+    /**
+     * 暴力求解，累计重复元素，出现重复元素后把重复元素后面的往前搬移一个位置
+     * 时间复杂度O(n^2)、O(n^3)
+     * 空间复杂度O(1)
+     * @param nums
+     * @return
+     */
+    public int removeDuplicates_by_bruce(int[] nums) {
+        int duplicates = 0;
+        for (int i = 0; i < nums.length - 1 - duplicates; i++) {
+            for (int j = i+1; j < nums.length - duplicates; j++) {
+                if (nums[i] == nums[j]) {
+                    duplicates++;
+                    nums[j] = nums[0] - duplicates;
+                    for (int j2 = j+1; j2 < nums.length - duplicates + 1; j2++) {
+                        int temp = nums[j2];
+                        nums[j2] = nums[j2-1];
+                        nums[j2-1] = temp; 
+                    }
+                    //下一个元素仍然可能重复
+                    j--;
+                }
+            }
+        }
+        return nums.length - duplicates;
     }
 }
 // @lc code=end
