@@ -113,14 +113,12 @@ public:
         int sum = 0;
         stack<int> s;
         for (int i = 0; i < height.size(); ++i) {
-            if (!s.empty() && height[i] > height[s.top()]) {
-                while (!s.empty() && height[i] > height[s.top()]) {
-                    int cur = s.top();
-                    s.pop();
-                    if (s.empty()) break;
-                    int _min = min(height[s.top()], height[i]);
-                    sum += ((i - s.top() - 1) * (_min - height[cur]));
-                }
+            while (!s.empty() && height[i] > height[s.top()]) {
+                int cur = s.top();
+                s.pop();
+                if (s.empty()) break;
+                int _min = min(height[s.top()], height[i]);
+                sum += ((i - s.top() - 1) * (_min - height[cur]));
             }
             s.push(i);
         }
