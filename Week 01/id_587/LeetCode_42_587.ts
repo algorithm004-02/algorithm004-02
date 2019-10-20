@@ -1,6 +1,7 @@
 /**
  * @param {number[]} height
  * @return {number}
+ * @description https://leetcode.com/problems/trapping-rain-water/
  * @description 采用栈存储左边界，在碰到右边界时，依次求到之前所有左边界的面积，求和后为蓄水面积
  * @summary
  * 1. 参考了https://leetcode-cn.com/problems/trapping-rain-water/solution/jie-yu-shui-by-leetcode/
