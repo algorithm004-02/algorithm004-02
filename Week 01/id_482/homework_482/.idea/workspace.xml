@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="92442fb8-3f32-424d-aac0-b32dbfd054cb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/study_datastructure/week_01_homework_03/LeetCode_189_482.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/study_datastructure/week_01_homework_03/LeetCode_1_482.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/study_datastructure/week_01_homework_03/LeetCode_21_482.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/study_datastructure/week_01_homework_03/LeetCode_26_482.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/study_datastructure/week_01_homework_03/LeetCode_283_482.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/study_datastructure/week_01_homework_03/LeetCode_66_482.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/study_datastructure/week_01_homework_03/LeetCode_88_482.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/study_datastructure/week_01_homework_04/LeetCode_42_482.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/study_datastructure/week_01_homework_04/LeetCode_641_482.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/study_datastructure/week_01_homework_04/analyze_and_implement_queue/Array.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/study_datastructure/week_01_homework_04/analyze_and_implement_queue/ArrayQueue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/study_datastructure/week_01_homework_04/analyze_and_implement_queue/Queue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/study_datastructure/week_01_homework_04/analyze_and_implement_queue/readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/study_datastructure/week_01_homework_04/implement_deque/ArrayDeque.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/study_datastructure/week_01_homework_04/implement_deque/Deque.java" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectId" id="1SSOAo7FVqH5bQjYiDTg1OPfsFn" />
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.LeetCode_1_482">
+    <configuration name="LeetCode_1_482" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="study_datastructure.week_01_homework_03.LeetCode_1_482" />
+      <module name="homework_482" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="study_datastructure.week_01_homework_03.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LeetCode_42_482" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="study_datastructure.week_01_homework_04.LeetCode_42_482" />
+      <module name="homework_482" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="study_datastructure.week_01_homework_04.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="homework_482" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Application.LeetCode_42_482" />
+      <item itemvalue="Application.LeetCode_1_482" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.LeetCode_1_482" />
+        <item itemvalue="Application.LeetCode_42_482" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="92442fb8-3f32-424d-aac0-b32dbfd054cb" name="Default Changelist" comment="" />
+      <created>1571553534014</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1571553534014</updated>
+      <workItem from="1571553542231" duration="82000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
