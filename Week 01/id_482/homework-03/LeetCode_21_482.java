@@ -1,4 +1,4 @@
-package study_datastructure.week_01_homework_03;
+package com.isshelter.study.week01.a.homework03;
 
 /**
  * @Auther: 482-李国栋

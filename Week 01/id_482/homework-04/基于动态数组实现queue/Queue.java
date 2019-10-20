@@ -1,7 +1,7 @@
 package study_datastructure.week_01_homework_04.analyze_and_implement_queue;
 
 /**
- * Queue 的重要接口
+ * Queue 的接口
  * @Auther: 482-李国栋
  * @Date: 2019/10/19
  * @param <E>

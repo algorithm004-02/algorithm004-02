@@ -1,11 +1,10 @@
-package study_datastructure.week_01_homework_03;
+package com.isshelter.study.week01.a.homework03;
+
 
 /**
- * @Auther: gd_space@163.com
- * @Date: 2019/10/16
- * @Description: com.isshelter.study.week01.homework03
- * @version: 1.0
- * https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/
+ * @Auther: 482-李国栋
+ * @Date: 2019/10/19
+ * @link https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/
  */
 public class LeetCode_26_482 {
     /**

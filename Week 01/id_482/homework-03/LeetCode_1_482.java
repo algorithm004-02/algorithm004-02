@@ -1,4 +1,4 @@
-package study_datastructure.week_01_homework_03;
+package com.isshelter.study.week01.a.homework03;
 
 /**
  * @Auther: 482-李国栋
@@ -6,7 +6,12 @@ package study_datastructure.week_01_homework_03;
  * @link
  */
 public class LeetCode_1_482 {
-
+    /**
+     * 解法1 ：暴力法 （迭代循环）
+     * @param nums
+     * @param target
+     * @return
+     */
     public int[] twoSum(int[] nums, int target) {
         for (int i = 0; i < nums.length; i++) {
             for (int j = i+1; j < nums.length; j++) {
@@ -16,10 +21,5 @@ public class LeetCode_1_482 {
             }
         }
         return null;
-    }
-
-    public static void main(String[] args) {
-
-        System.out.println("--");
     }
 }
