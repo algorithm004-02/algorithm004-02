@@ -6,10 +6,11 @@
  *     ListNode(int x) { val = x; }
  * }
  */
-//1.递归
-//2.迭代
-//3.双指针
-class MergeTwoSortedArray {
+// 1.递归
+// 2.迭代
+// 3.双指针
+// https://leetcode-cn.com/problems/merge-two-sorted-lists/
+class Solution {
     public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
         ListNode result = new ListNode(-1);
         ListNode temp = result;

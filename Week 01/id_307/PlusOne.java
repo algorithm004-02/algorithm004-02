@@ -1,4 +1,5 @@
-class PlusOne {
+// https://leetcode-cn.com/problems/plus-one/
+class Solution {
     public int[] plusOne(int[] digits) {
         int pos = digits.length - 1;
         while (pos > -1 && (digits[pos] = (digits[pos] + 1) % 10) == 0) {

@@ -1,7 +1,8 @@
-//1.移数字插入
-//2.合并，排序
-//3.双指针
-class MergeTwoSortedArray {
+// 1.移数字插入
+// 2.合并，排序
+// 3.双指针
+// https://leetcode-cn.com/problems/merge-sorted-array/
+class Solution {
     public void merge(int[] nums1, int m, int[] nums2, int n) {
         int mlast = m - 1, nlast = n - 1, rlast = m + n -1;
         while (mlast > -1 && nlast > -1) {

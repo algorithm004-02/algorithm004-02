@@ -1,7 +1,8 @@
-//1.记录末尾元素，向右挪元素 重复。T:O(n^k) S:O(1)
-//2.借助另一个数组，先挪后面k个，再挪前面。T:O(n) S:O(n)
-//3.反转
-class RoutateArray {
+// https://leetcode-cn.com/problems/rotate-array/
+// 1.记录末尾元素，向右挪元素 重复。T:O(n^k) S:O(1)
+// 2.借助另一个数组，先挪后面k个，再挪前面。T:O(n) S:O(n)
+// 3.反转
+class Solution {
     public void rotate(int[] nums, int k) {
         // 减少不必要循环
         k = k % nums.length;
