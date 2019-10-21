@@ -1,37 +1,35 @@
 /**
-¸ø¶¨?n ¸ö·Ç¸ºÕûÊı±íÊ¾Ã¿¸ö¿í¶ÈÎª 1 µÄÖù×ÓµÄ¸ß¶ÈÍ¼£¬¼ÆËã°´´ËÅÅÁĞµÄÖù×Ó£¬ÏÂÓêÖ®ºóÄÜ½Ó¶àÉÙÓêË®¡£
-
-
-
-ÉÏÃæÊÇÓÉÊı×é [0,1,0,2,1,0,1,3,2,1,2,1] ±íÊ¾µÄ¸ß¶ÈÍ¼£¬ÔÚÕâÖÖÇé¿öÏÂ£¬¿ÉÒÔ½Ó 6 ¸öµ¥Î»µÄÓêË®£¨À¶É«²¿·Ö±íÊ¾ÓêË®£©¡£?¸ĞĞ» Marcos ¹±Ï×´ËÍ¼¡£
-
-Ê¾Àı:
-
-ÊäÈë: [0,1,0,2,1,0,1,3,2,1,2,1]
-Êä³ö: 6
-
-À´Ô´£ºÁ¦¿Û£¨LeetCode£©
-Á´½Ó£ºhttps://leetcode-cn.com/problems/trapping-rain-water
-Öø×÷È¨¹éÁì¿ÛÍøÂçËùÓĞ¡£ÉÌÒµ×ªÔØÇëÁªÏµ¹Ù·½ÊÚÈ¨£¬·ÇÉÌÒµ×ªÔØÇë×¢Ã÷³ö´¦¡£
-
-*/
+ * ç»™å®šÂ n ä¸ªéè´Ÿæ•´æ•°è¡¨ç¤ºæ¯ä¸ªå®½åº¦ä¸º 1 çš„æŸ±å­çš„é«˜åº¦å›¾ï¼Œè®¡ç®—æŒ‰æ­¤æ’åˆ—çš„æŸ±å­ï¼Œä¸‹é›¨ä¹‹åèƒ½æ¥å¤šå°‘é›¨æ°´ã€‚
+ * <p>
+ * <p>
+ * <p>
+ * ä¸Šé¢æ˜¯ç”±æ•°ç»„ [0,1,0,2,1,0,1,3,2,1,2,1] è¡¨ç¤ºçš„é«˜åº¦å›¾ï¼Œåœ¨è¿™ç§æƒ…å†µä¸‹ï¼Œå¯ä»¥æ¥ 6 ä¸ªå•ä½çš„é›¨æ°´ï¼ˆè“è‰²éƒ¨åˆ†è¡¨ç¤ºé›¨æ°´ï¼‰ã€‚Â æ„Ÿè°¢ Marcos è´¡çŒ®æ­¤å›¾ã€‚
+ * <p>
+ * ç¤ºä¾‹:
+ * <p>
+ * è¾“å…¥: [0,1,0,2,1,0,1,3,2,1,2,1]
+ * è¾“å‡º: 6
+ * <p>
+ *
+ *
+ */
 
 class Solution {
     public int trap(int[] height) {
         if (height == null || height.length == 0) {
-			return 0;
-		}
-		int result = 0;
-		int[] left = new int[height.length];
-		left[0] = height[0];
-		int right = height[height.length-1];
-		for (int i = 1; i < height.length; i++) {
-			left[i] = Math.max(left[i - 1], height[i]);
-		}
-		for (int i = height.length - 2; i >= 0; i--) {
-			right = Math.max(right, height[i]);
-			result += Math.min(left[i], right) - height[i];
-		}
-		return result;
+            return 0;
+        }
+        int result = 0;
+        int[] left = new int[height.length];
+        left[0] = height[0];
+        int right = height[height.length - 1];
+        for (int i = 1; i < height.length; i++) {
+            left[i] = Math.max(left[i - 1], height[i]);
+        }
+        for (int i = height.length - 2; i >= 0; i--) {
+            right = Math.max(right, height[i]);
+            result += Math.min(left[i], right) - height[i];
+        }
+        return result;
     }
 }
