@@ -6,8 +6,6 @@
 
    hash函数碰撞之后，在该位置上存放一个链表。可以存放多个数
 
-
-
 ## Map ： key-value 对， key不重复
 
 查看HashMap源码，写一个小总结！
@@ -38,10 +36,45 @@ Java 中的HashSet直接嫁接在HashMap上
         - 叶子节点上删除很简单，直接删除即可
         -  找到一个最接近于该节点的节点作为新的节点
 
-2. **平衡二叉树**：
 
+## 递归
+
+- 类比到盗梦空间
+
+  - 一层一层的进入下层梦境
+  - 一层一层的回到上层梦境
+  - 人物可以带回一些东西，类似于参数
+
+- 递归模板
+
+  - 递归终止条件（terminator）
+  - 处理逻辑 （current level logic）
+  - 下一层 （drill down）
+  - 清理（有时候不需要，reverse the current level status）
+
+  ```java
+  public void recur(int level, int param) {
+    	// terminator
+    	if(level > MAX_LEVEL) {
+        	// process result
+        	return;
+      }
+    
+    	// process current logic
+    	process(level, param);
+   		
+    	// drill down
+    	recur(level + 1, newParam);
    
-   
+    	// restore current status
+  }
+  ```
+
+- 注意
+
+  - 抛弃人肉递归（画状态树，最大误区）
+  - 寻找最近最简方法，将其拆解成可重复解决的问题（重复子问题）
+  - 数学归纳法思维
 
 
 
