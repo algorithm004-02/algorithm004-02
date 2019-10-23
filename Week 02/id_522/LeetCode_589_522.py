@@ -13,9 +13,9 @@ class Solution(object):
         """
         if not root:return []
         res=[]
-        stack=[]
-        stack.append(root)
-
+        #stack=[]
+        #stack.append(root)
+        stack=[root]
         while stack:
             node =stack.pop()
             res.append(node.val)
