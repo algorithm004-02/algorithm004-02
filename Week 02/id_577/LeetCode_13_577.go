@@ -16,9 +16,11 @@ func backtrack(first int, curr []int, k int,  n int) {
     
     if len(curr) == k {
         
+        temp := make([]int, k)
+		copy(temp, curr)
+		
         
-        
-        output = append(output, curr)
+        output = append(output, temp)
         
         
         return 
