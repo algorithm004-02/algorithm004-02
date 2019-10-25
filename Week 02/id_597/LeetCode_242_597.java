@@ -6,7 +6,11 @@ import java.util.Arrays;
  */
 public class LeetCode_242_597 {
 
-    class Solution {
+    public static void main(String[] args) {
+        System.out.println(new Solution().isAnagram1("a", "b"));
+    }
+
+    static class Solution {
 
         public boolean isAnagram(String s, String t) {
             if (s.length() != t.length())
@@ -25,19 +29,12 @@ public class LeetCode_242_597 {
         }
 
         public boolean isAnagram1(String s, String t) {
-            if (s.length() != t.length())
-                return false;
+            if (s.length() != t.length()) return false;
+            //要用int数组
             int[] counter = new int[26];
-            for (int i = 0; i < s.length(); i++) {
-                counter[s.charAt(i) - 'a']++;
-            }
-
-            for (int i = 0; i < s.length(); i++) {
-                int index = t.charAt(i) - 'a';
-                if (--counter[index] < 0)
-                    return false;
-            }
-
+            for (int i = 0; i < s.length(); i++) counter[s.charAt(i) - 'a']++;
+            for (int i = 0; i < t.length(); i++)
+                if (--counter[t.charAt(i) - 'a'] < 0) return false;
             return true;
         }
 
