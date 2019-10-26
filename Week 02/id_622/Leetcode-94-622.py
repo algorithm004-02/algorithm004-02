@@ -38,3 +38,31 @@ class Solution:
             ans.append(root.val)
             if root.right is not None:
                 self.recursion(root.right, ans)
+
+    # 第二遍
+    # 与第一遍不同，函数内定义函数，且Terminator修改为is None返回
+    def inorderTraversal1(self, root: TreeNode) -> List[int]:
+        ans = []
+        def recursion(root):
+            if root is None: return
+            recursion(root.left)
+            ans.append(root.val)
+            recursion(root.right)   
+        recursion(root)
+        return ans
+
+    # 迭代法
+    def inorderTraversal2(self, root: TreeNode) -> List[int]:
+        ans = []
+        stack = []
+        p = root
+        while p or stack:
+            # 把p的左子树入栈
+            while p:
+                stack.append(p)
+                p = p.left
+            # p为空时，则开始出栈
+            p = stack.pop()
+            ans.append(p.val)
+            p = p.right
+        return ans

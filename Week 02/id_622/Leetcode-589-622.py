@@ -33,3 +33,25 @@ class Solution:
             
         for i in root.children:
             self.recursion(i, ans)
+    
+    # 第二遍
+    """
+    伪代码：
+        define result
+        define function
+            function:
+                if to the end: return
+                add value to result
+                find next node
+        do function
+        return result
+    """
+    def preorder(self, root: 'Node') -> List[int]:
+        ans = []
+        def recursion(root):
+            if not root: return
+            ans.append(root.val)
+            for child in root.children:
+                recursion(child)
+        recursion(root)
+        return ans

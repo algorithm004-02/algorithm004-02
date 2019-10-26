@@ -40,4 +40,27 @@ class Solution:
             if i:
                 self.recursion(i, ans)
         ans.append(root.val)
-            
+    
+
+    # 第二遍
+    """
+       ans = []
+       def recursion:
+           if to the end: return
+           for child in children:
+               if child is not empty:
+                   go down: recursion
+            add to result
+        do recursion
+        return ans
+    """
+    def postorder(self, root: 'Node') -> List[int]:
+        ans = []
+        def recursion(root):
+            if not root: return
+            for child in root.children:
+                if child:
+                    recursion(child)
+            ans.append(root.val)
+        recursion(root)
+        return ans

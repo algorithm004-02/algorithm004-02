@@ -38,3 +38,27 @@ class Solution:
                 self.recursion(root.left, ans)
             if root.right is not None:
                 self.recursion(root.right, ans)
+    # 第二遍，精简第一遍写法
+    def preorderTraversal(self, root: TreeNode) -> List[int]:
+        ans = []
+        def recursion(root):
+            if root is None: return
+            ans.append(root.val)
+            recursion(root.left)
+            recursion(root.right)
+        recursion(root)
+        return ans
+
+    # 迭代法
+    def preorderTraversal(self, root: TreeNode) -> List[int]:
+        ans = []
+        stack = []
+        p = root
+        while p or stack:
+            while p:
+                ans.append(p.val)
+                stack.append(p)
+                p = p.left
+            p = stack.pop()
+            p = p.right
+        return ans
