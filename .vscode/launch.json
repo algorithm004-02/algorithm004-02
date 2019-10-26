@@ -1,0 +1,16 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - LeetCode_26_657",
+            "request": "launch",
+            "mainClass": "LeetCode_26_657"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - RemoveDuplicates",
+            "request": "launch",
+            "mainClass": "RemoveDuplicates"
+        }
+    ]
+}
