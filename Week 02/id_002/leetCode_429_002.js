@@ -19,3 +19,4 @@ var levelOrder = function(root) {
         
         node.children && node.children.forEach(node => traverse(node, deep + 1));
     }
+}
