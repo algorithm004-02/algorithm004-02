@@ -30,23 +30,19 @@ class Solution:
         d = {}
         for x in strs:
             dd=sorted(x)
-
             k = "".join(dd)
-
             if k in d:
                 d[k].append(x)
             else:
                 d[k] = [x]
         return list(d.values())
         '''
-        但是，我对于sorted 还是感觉，不用为好。
+        但是，我对于sorted 还是感觉，不用为好。但在国际站上，100ms，排名99%
  '''
 class Solution:
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
 
         import collections
-
-
         ans = collections.defaultdict(list)
         for s in strs:
             count = [0] * (26+97)
@@ -55,7 +51,25 @@ class Solution:
             ans[tuple(count)].append(s)
         return ans.values()
 '''
-在这里的优化思路是，如果count 数组 开的小一些，每次都要进行 ord(c)-ord（'a'） ,因为这个运算在两个for 内部，所以，最简单的优化是，把ord('a') ,直接改写为97
+
+···
+class Solution:
+    def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
+
+        import collections
+        ans = collections.defaultdict(list)
+        for s in strs:
+            #count = [0] * 26
+            count=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            for c in s:
+                count[ord(c)-97] += 1
+            ans[tuple(count)].append(s)
+        return ans.values()
+
+···
+
+在这里的优化思路是，如果count 数组 开的小一些，每次都要进行 ord(c)-ord（'a'） ,因为这个运算在两个for 内部，
+所以，最简单的优化是，把ord('a') ,直接改写为97
 当然，我增加了数组长度后，tuple 那里，也会增加时间，这就看 具体的输入数据，是哪一种比较好了。
 使用哪个算法，是要看输入数据的。 在别人的代码上，优化代码，相对容易；如果结合测试用例，优化会更好。
 
@@ -79,3 +93,8 @@ class Solution:
 整体现在是周三，感觉还是难。做2天题后，再看看。
 
 
+代码的优化，
+1、基本上是靠看别人的优秀代码，受到启发，
+2、好的测试用例，帮助你找到边界，刁钻的漏洞，完善程序。
+3、能用常数的，不用表达式
+4、能用数学公式的，不用循环。把O(N) 变成 O(1)
