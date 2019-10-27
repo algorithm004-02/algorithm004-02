@@ -1,4 +1,4 @@
-
+class Solution {
 	public List<List<String>> solveNQueens(int n) {
 	List<Integer> nums = new ArrayList<Integer>();
 	Map<Integer,String> mapList = new HashMap<Integer,String>();
@@ -48,4 +48,8 @@ private void getQueens(int n,List<Integer> list,List<List<String>> queenList,Map
 			list.remove(list.size()-1);
 		}
 	}
+}
+
+
+
 }
