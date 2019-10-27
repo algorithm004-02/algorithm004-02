@@ -33,3 +33,27 @@ var solveNQueens = function(n) {
         return result.map(ite => ite.map(c => "Q".padStart(c + 1, '.').padEnd(n, '.')));
     }
 };
+
+/**
+ * 精简版
+ * @param {number} n
+ * @return {string[][]}
+ */
+var solveNQueens2 = function(n) {
+    let result = [];
+    DFS([], [], []);
+    return generateResult(result);
+    
+    function DFS(curState = [], pie = [], na = []) {
+        let row = curState.length;
+        if(row >= n) return result.push(curState);
+        
+        for(let col = 0; col < n; col++) {
+            if(curState.includes(col) || pie.includes(row + col) || na.includes(row - col)) continue;
+            DFS([...curState, col], [...pie, row + col], [...na, row - col]);
+        }
+    }
+    function generateResult(result) {
+        return result.map(ite => ite.map(c => "Q".padStart(c + 1, '.').padEnd(n, '.')));
+    }
+};
