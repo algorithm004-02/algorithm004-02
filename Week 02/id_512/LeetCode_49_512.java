@@ -1,6 +1,6 @@
 package WEEK2.LeetCode.HashTableQuestion;
 
-import java.util.List;
+import java.util.*;
 
 /**
  * No.49
@@ -25,7 +25,19 @@ import java.util.List;
 public class GroupAnagram {
     /* 想法第一次只想到了暴力 遍历*/
     public List<List<String>> groupAnagrams(String[] strs) {
-
-        return null;
+        Map<String, List<String>> map = new HashMap<>();
+        for(String w : strs){
+            String key = hash(w);
+            if(!map.containsKey(key)) map.put(key, new LinkedList<>());
+            map.get(key).add(w);
+        }
+        return new ArrayList<>(map.values());
     }
+
+    String hash(String s){
+        int[] a = new int[26];
+        for(char c : s.toCharArray()) a[c-'a']++;
+        return Arrays.toString(a);
+    }
+
 }
