@@ -68,6 +68,18 @@ class Solution:
 
 ···
 
+
+```
+
+class Solution:
+    def groupAnagrams(self, strs):
+        d = {}
+        for w in strs:
+            key = tuple(sorted(w))
+            d[key] = d.get(key, []) + [w]
+        return d.values()
+```
+这个解法，体现了python 的简洁。
 在这里的优化思路是，如果count 数组 开的小一些，每次都要进行 ord(c)-ord（'a'） ,因为这个运算在两个for 内部，
 所以，最简单的优化是，把ord('a') ,直接改写为97
 当然，我增加了数组长度后，tuple 那里，也会增加时间，这就看 具体的输入数据，是哪一种比较好了。
