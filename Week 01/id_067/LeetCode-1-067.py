@@ -1,27 +1,24 @@
-"""
-1 、暴力循环
-"""
-class Solution:
-    def twoSum(self, nums: List[int], target: int) -> List[int]:
-        for i in range(0 , len(nums)-1):
-            for j in range(i+1 , len(nums)):
-                if nums[i] + nums[j] == target:
-                    return [i,j]
-"""
-2、字典  两遍循环，2+2 3+3 相同数字出现两遍就会出错
+#
+# @lc app=leetcode.cn id=1 lang=python3
+#
+# [1] 两数之和
+#
 
+# @lc code=start
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
-        sumdict = {};
-        for i in range(0 , len(nums)):
-            sumdict = [nums[i] , i]
-            print(sumdict)
-        for j in range(0 ,  len(nums)):
-            if (target - nums[j]) in sumdict:
-               print( j )
-               print(target - nums[j])
-               print(sumdict[target - nums[j]]
-                     
-执行时报错 key为数值时会与序号相混
-不允许同一键出现两次，3 3 如何处理
-"""
+        if not nums:
+            return False
+        numsdict = {}
+        for i in range( 0, len(nums)):
+            if (nums[i] in numsdict) and (i != numsdict[nums[i]]):
+                #print(numsdict)
+                return [ numsdict[nums[i]] , i] 
+            else:
+                numsdict[ target - nums[i]] = i
+                #print(numsdict)
+        
+
+        
+# @lc code=end
+
