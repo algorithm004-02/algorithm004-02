@@ -78,3 +78,84 @@ print(cc.binsearch(lista, target))
 又一次，被敲脑袋，defaultdict ，基础的数据结构，很有用。
 
 做不出来，题目，不爽，把22题，515 题，一顿暴打，哈哈，打不过老虎，我踢猫。
+
+10-30 早上起来，就写33题，自己没有写出来，二分，二分，二分，
+看了官方的题解，先是用两遍二分的，第一遍就是找到旋转点。而后把数组，按照旋转点，切为两部分，看看，target 在哪一部分，就在哪一部分里面找。
+感觉挺好，但是，需要处理下标问题。
+
+看到这个人讲的，感觉好多了，一遍就行了。
+https://leetcode-cn.com/problems/search-in-rotated-sorted-array/solution/xiang-xi-tong-su-de-si-lu-fen-xi-duo-jie-fa-by-35/
+解法三
+参考这里，算法基于一个事实，数组从任意位置劈开后，至少有一半是有序的，什么意思呢？
+
+比如 [ 4 5 6 7 1 2 3] ，从 7 劈开，左边是 [ 4 5 6 7] 右边是 [ 7 1 2 3]，左边是有序的。
+
+基于这个事实。
+
+我们可以先找到哪一段是有序的 (只要判断端点即可)，然后看 target 在不在这一段里，如果在，那么就把另一半丢弃。如果不在，那么就把这一段丢弃。
+
+作者：windliang
+
+```
+
+public int search(int[] nums, int target) {
+		int start = 0;
+		int end = nums.length - 1;
+		while (start <= end) {
+			int mid = (start + end) / 2;
+			if (target == nums[mid]) {
+				return mid;
+			}
+            //左半段是有序的
+			if (nums[start] <= nums[mid]) {
+                //target 在这段里
+				if (target >= nums[start] && target < nums[mid]) {
+					end = mid - 1;
+				} else {
+					start = mid + 1;
+				}
+            //右半段是有序的
+			} else {
+				if (target > nums[mid] && target <= nums[end]) {
+					start = mid + 1;
+				} else {
+					end = mid - 1;
+				}
+			}
+
+		}
+		return -1;
+	}
+
+
+```
+这里面最关键的是，= 号，一旦漏了一个，程序立马错了，真的要非常小心。
+
+我的代码
+
+```
+class Solution:
+    def search(self, nums: List[int], target: int) -> int:
+
+        left , right= 0 , len(nums)-1
+
+        while left <= right:  #这里的= 很重要
+
+            mid =left+right>>1
+            if nums[mid] == target :
+                return mid
+
+            #假设左边是升序的
+            if nums[left]<=nums[mid]:
+                if  nums[left] <= target <nums[mid]:  #这里的= 不可能 target <=nums[mid]
+                    right=mid-1
+                else:
+                    left=mid+1
+            else: #此时右边是升序的
+                if nums[mid] < target <=nums[right]:
+                    left=mid+1
+                else:
+                    right=mid-1
+        return -1
+```
+这里还有一个心得，就是，只关注好写的业务逻辑，其他的用else 搞定，如 nums[mid] < target <=nums[right]
