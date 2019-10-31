@@ -51,7 +51,7 @@ class Solution:
                 left =mid
                 #print(left)
         try:        
-            if target in matrix[left]+matrix[right]:
+            if target in matrix[left]+matrix[right]: #会出现matrix[right] 下标越界
                 return True
         except:
             if target in matrix[left]:
