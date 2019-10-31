@@ -159,3 +159,56 @@ class Solution:
         return -1
 ```
 这里还有一个心得，就是，只关注好写的业务逻辑，其他的用else 搞定，如 nums[mid] < target <=nums[right]
+
+
+在这里，把455 题的收获，写下来，
+
+# 第一遍 ，用了deque ，不断的 popleft() ，以为 这个性能比列表好；
+
+#看了官方的题解，应该移动下标，，顿时，感觉自己很蠢。
+
+#第三遍，看了官方题解后。这里有个问题？？？
+
+#马上找到 python idle 测试了，
+
+'''
+=================== RESTART: G:/Python/Python37/zhongxu.py ===================
+2.240844687
+>>>
+=================== RESTART: G:/Python/Python37/zhongxu.py ===================
+2.317422119
+>>>
+
+# while i< len(g) and j<len(s) 用时，在下面，明显变长了。
+=================== RESTART: G:/Python/Python37/zhongxu.py ===================
+3.233211371
+>>>
+=================== RESTART: G:/Python/Python37/zhongxu.py ===================
+3.2318194929999997
+
+'''
+
+```
+class Solution:
+    def findContentChildren(self, g: List[int], s: List[int]) -> int:
+
+        g.sort()
+        s.sort()
+        res=0
+        i,j =0,0
+
+        qqq=len(g)
+        ttt=len(s)
+        while i<qqq and j<ttt :
+       # while i< len(g) and j<len(s) :  #这里，每次执行while ，都会再执行一遍len 函数调用么？ 用时较多
+
+            if s[j] >= g[i]:
+                i+=1
+                j+=1
+                res+=1
+            else:
+
+                j+=1
+        return res
+
+```

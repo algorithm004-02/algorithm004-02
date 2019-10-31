@@ -1,4 +1,6 @@
 # 第一遍自己手写，超时了，卡在第21个测试用例上。用了3个多小时，累死。
+
+#没有测试完毕，超时了，先写到这里，
 class Solution:
     def ladderLength(self, beginWord, endWord, wordList):
         if endWord not in wordList: return 0
