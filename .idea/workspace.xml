@@ -1,0 +1,640 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a681cc1b-c899-474f-a323-3a1b8c5678a3" name="Default" comment="" />
+    <ignored path=".idea/misc.xml" />
+    <ignored path=".idea/modules.xml" />
+    <ignored path=".idea/vcs.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor />
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LeetCode_1_422.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Week 02/id_422/LeetCode_1_422.java">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="LeetCode_144_422.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Week 02/id_422/LeetCode_144_422.java">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="LeetCode_641_422.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Week 01/id_422/LeetCode_641_422.java">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="LeetCode_66_422.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Week 01/id_422/LeetCode_66_422.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="20" column="1" lean-forward="true" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="projectSyncType">
+      <map>
+        <entry key="$USER_HOME$/IdeaProjects/aepp-sdk-java" value="PREVIEW" />
+      </map>
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Week 01/id_107/LeetCode_641_107.cs" />
+        <option value="$PROJECT_DIR$/Week 01/id_422/LeetCode_461_422.java" />
+        <option value="$PROJECT_DIR$/Week 01/id_422/LeetCode_66_422.java" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="width" value="634" />
+    <option name="height" value="800" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="algorithm004-02" type="b2602c69:ProjectViewProjectNode" />
+              <item name="algorithm004-02" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="algorithm004-02" type="b2602c69:ProjectViewProjectNode" />
+              <item name="algorithm004-02" type="462c0819:PsiDirectoryNode" />
+              <item name="Week 01" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="algorithm004-02" type="b2602c69:ProjectViewProjectNode" />
+              <item name="algorithm004-02" type="462c0819:PsiDirectoryNode" />
+              <item name="Week 01" type="462c0819:PsiDirectoryNode" />
+              <item name="id_002" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="algorithm004-02" type="b2602c69:ProjectViewProjectNode" />
+              <item name="algorithm004-02" type="462c0819:PsiDirectoryNode" />
+              <item name="Week 01" type="462c0819:PsiDirectoryNode" />
+              <item name="id_007" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="algorithm004-02" type="b2602c69:ProjectViewProjectNode" />
+              <item name="algorithm004-02" type="462c0819:PsiDirectoryNode" />
+              <item name="Week 01" type="462c0819:PsiDirectoryNode" />
+              <item name="id_012" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="algorithm004-02" type="b2602c69:ProjectViewProjectNode" />
+              <item name="algorithm004-02" type="462c0819:PsiDirectoryNode" />
+              <item name="Week 01" type="462c0819:PsiDirectoryNode" />
+              <item name="id_017" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="algorithm004-02" type="b2602c69:ProjectViewProjectNode" />
+              <item name="algorithm004-02" type="462c0819:PsiDirectoryNode" />
+              <item name="Week 01" type="462c0819:PsiDirectoryNode" />
+              <item name="id_022" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="algorithm004-02" type="b2602c69:ProjectViewProjectNode" />
+              <item name="algorithm004-02" type="462c0819:PsiDirectoryNode" />
+              <item name="Week 01" type="462c0819:PsiDirectoryNode" />
+              <item name="id_042" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="algorithm004-02" type="b2602c69:ProjectViewProjectNode" />
+              <item name="algorithm004-02" type="462c0819:PsiDirectoryNode" />
+              <item name="Week 01" type="462c0819:PsiDirectoryNode" />
+              <item name="id_047" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="algorithm004-02" type="b2602c69:ProjectViewProjectNode" />
+              <item name="algorithm004-02" type="462c0819:PsiDirectoryNode" />
+              <item name="Week 01" type="462c0819:PsiDirectoryNode" />
+              <item name="id_062" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="algorithm004-02" type="b2602c69:ProjectViewProjectNode" />
+              <item name="algorithm004-02" type="462c0819:PsiDirectoryNode" />
+              <item name="Week 01" type="462c0819:PsiDirectoryNode" />
+              <item name="id_077" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="algorithm004-02" type="b2602c69:ProjectViewProjectNode" />
+              <item name="algorithm004-02" type="462c0819:PsiDirectoryNode" />
+              <item name="Week 01" type="462c0819:PsiDirectoryNode" />
+              <item name="id_092" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="algorithm004-02" type="b2602c69:ProjectViewProjectNode" />
+              <item name="algorithm004-02" type="462c0819:PsiDirectoryNode" />
+              <item name="Week 01" type="462c0819:PsiDirectoryNode" />
+              <item name="id_107" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="algorithm004-02" type="b2602c69:ProjectViewProjectNode" />
+              <item name="algorithm004-02" type="462c0819:PsiDirectoryNode" />
+              <item name="Week 01" type="462c0819:PsiDirectoryNode" />
+              <item name="id_112" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="algorithm004-02" type="b2602c69:ProjectViewProjectNode" />
+              <item name="algorithm004-02" type="462c0819:PsiDirectoryNode" />
+              <item name="Week 01" type="462c0819:PsiDirectoryNode" />
+              <item name="id_417" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="algorithm004-02" type="b2602c69:ProjectViewProjectNode" />
+              <item name="algorithm004-02" type="462c0819:PsiDirectoryNode" />
+              <item name="Week 01" type="462c0819:PsiDirectoryNode" />
+              <item name="id_422" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="algorithm004-02" type="b2602c69:ProjectViewProjectNode" />
+              <item name="algorithm004-02" type="462c0819:PsiDirectoryNode" />
+              <item name="Week 02" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="algorithm004-02" type="b2602c69:ProjectViewProjectNode" />
+              <item name="algorithm004-02" type="462c0819:PsiDirectoryNode" />
+              <item name="Week 02" type="462c0819:PsiDirectoryNode" />
+              <item name="id_007" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="algorithm004-02" type="b2602c69:ProjectViewProjectNode" />
+              <item name="algorithm004-02" type="462c0819:PsiDirectoryNode" />
+              <item name="Week 02" type="462c0819:PsiDirectoryNode" />
+              <item name="id_292" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="algorithm004-02" type="b2602c69:ProjectViewProjectNode" />
+              <item name="algorithm004-02" type="462c0819:PsiDirectoryNode" />
+              <item name="Week 02" type="462c0819:PsiDirectoryNode" />
+              <item name="id_462" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="jdk.selected.JAVA_MODULE" value="1.8" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="com.alibabacloud.intellij.config.AccountConfigurable" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <properties />
+      <listeners />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a681cc1b-c899-474f-a323-3a1b8c5678a3" name="Default" comment="" />
+      <created>1572680004569</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1572680004569</updated>
+      <workItem from="1572680006982" duration="7290000" />
+      <workItem from="1572692843645" duration="120000" />
+      <workItem from="1572693020273" duration="94000" />
+      <workItem from="1572693148474" duration="226000" />
+      <workItem from="1572694054044" duration="16000" />
+      <workItem from="1572694104916" duration="902000" />
+      <workItem from="1572695289106" duration="1811000" />
+    </task>
+    <task id="LOCAL-00001" summary="leetcode 641 java实现双端队列">
+      <created>1572694915744</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1572694915744</updated>
+    </task>
+    <task id="LOCAL-00002" summary="leetcode 66 加一">
+      <created>1572699217512</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1572699217512</updated>
+    </task>
+    <task id="LOCAL-00003" summary="第二周 作业">
+      <created>1572717716762</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1572717716762</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="10459000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="23" width="1280" height="734" extended-state="6" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.52392346" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5015949" side_tool="true" weight="0.3266518" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.4984051" weight="0.66558444" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Freeline" order="7" />
+      <window_info id="Designer" order="2" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info id="Image Layers" order="2" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="leetcode" order="3" side_tool="true" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info id="UI Designer" order="2" />
+      <window_info id="Project Explorer" order="2" weight="0.32974482" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info anchor="right" id="Capture Analysis" order="3" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="right" id="Flutter Inspector" order="3" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Flutter Outline" order="3" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info id="Job Explorer" order="2" weight="0.32974482" />
+      <window_info anchor="right" id="Maven Projects" order="3" visible="true" weight="0.32974482" />
+      <window_info anchor="bottom" id="Flutter Performance" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info anchor="right" id="Theme Preview" order="3" />
+      <window_info anchor="bottom" id="Console" order="7" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/Week 01/id_587/LeetCode_42_587.js" />
+        <option value="$PROJECT_DIR$/Week 01/id_587/LeetCode_26_587.js" />
+      </list>
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="leetcode 641 java实现双端队列" />
+    <MESSAGE value="leetcode 66 加一" />
+    <MESSAGE value="第二周 作业" />
+    <option name="LAST_COMMIT_MESSAGE" value="第二周 作业" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Week 01/id_422/LeetCode_641_422.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Week 01/id_107/LeetCode_641_107.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1258">
+          <caret line="74" column="53" selection-start-line="74" selection-start-column="20" selection-end-line="74" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Week 01/id_112/641.design-circular-deque.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2380">
+          <caret line="142" column="4" selection-start-line="74" selection-start-column="4" selection-end-line="146" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Week 01/id_422/LeetCode_461_422.java" />
+    <entry file="file://$PROJECT_DIR$/Week 01/id_107/LeetCode_641_107.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1258">
+          <caret line="74" column="53" selection-start-line="74" selection-start-column="20" selection-end-line="74" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Week 01/id_112/641.design-circular-deque.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1462">
+          <caret line="142" column="4" selection-start-line="74" selection-start-column="4" selection-end-line="146" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Week 01/id_422/LeetCode_461_422.java" />
+    <entry file="file://$PROJECT_DIR$/Week 01/id_107/LeetCode_641_107.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1258">
+          <caret line="74" column="53" selection-start-line="74" selection-start-column="20" selection-end-line="74" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Week 01/id_112/641.design-circular-deque.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2380">
+          <caret line="142" column="4" selection-start-line="74" selection-start-column="4" selection-end-line="146" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Week 01/id_422/LeetCode_461_422.java" />
+    <entry file="file://$PROJECT_DIR$/Week 01/id_422/NOTE.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Week 01/id_382/LeetCode_641_382.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="935">
+          <caret line="123" column="29" selection-start-line="123" selection-start-column="29" selection-end-line="123" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Week 02/id_007/NOTE.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Week 02/id_462/NOTE.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Week 01/id_417/LeetCode_11_417.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home/src.zip!/java/util/LinkedList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="82" column="13" selection-start-line="82" selection-start-column="13" selection-end-line="82" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Week 01/id_022/LeetCode_42_022.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="31" column="18" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Week 01/id_022/LeetCode_641_022.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="491">
+          <caret line="127" column="48" selection-start-line="127" selection-start-column="12" selection-end-line="127" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Week 01/id_107/LeetCode_641_107.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1258">
+          <caret line="74" column="53" selection-start-line="74" selection-start-column="20" selection-end-line="74" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Week 01/id_112/641.design-circular-deque.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2380">
+          <caret line="142" column="4" selection-start-line="74" selection-start-column="4" selection-end-line="146" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Week 01/id_422/LeetCode_461_422.java" />
+    <entry file="file://$PROJECT_DIR$/Week 01/id_422/LeetCode_641_422.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Week 01/id_422/LeetCode_66_422.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="1" lean-forward="true" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Week 02/id_422/LeetCode_1_422.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Week 02/id_422/LeetCode_144_422.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Python 2.7 interpreter library</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>id_057</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
