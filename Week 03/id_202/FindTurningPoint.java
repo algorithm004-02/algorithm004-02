@@ -1,8 +1,16 @@
-# NOTE
-############################################################# week03 ##############################################################
+package com.algorithm.qinchao.homework.week03;
 
-1、使用二分查找，寻找一个半有序数组 [4, 5, 6, 7, 0, 1, 2] 中间无序的地方
-public Map<Integer, Integer> finTurningPoint(int nums[]) {
+import java.util.HashMap;
+import java.util.Map;
+
+/**
+ * @author zhuruihong
+ * @version 1.0
+ * @date 2019/11/3 17:19
+ * @description
+ */
+public class FindTurningPoint {
+    public static Map<Integer, Integer> finTurningPoint(int nums[]) {
         Map<Integer, Integer> resultMap = new HashMap();
         if (nums.length == 1) {
             resultMap.put(0, nums[0]);
@@ -28,15 +36,15 @@ public Map<Integer, Integer> finTurningPoint(int nums[]) {
             }
         }
         return resultMap;
-    }  
+    }
 
-2、学习总结
+    public static void main(String[] args) {
+        int[] nums = {3,4,5,1,2};
+        int[] nums1 = {5,6,2,3,4};
+        int[] nums2 = {4,5,6,2,3};
+        System.out.println(FindTurningPoint.finTurningPoint(nums));
+        System.out.println(FindTurningPoint.finTurningPoint(nums1));
+        System.out.println(FindTurningPoint.finTurningPoint(nums2));
 
-​	1、深度优先搜索：水滴掉入平静的水中引起的轻微荡漾，水纹一层层的扩散。
-
-​	2、广度优先搜索：重复重复再重复，不撞南墙不回头，撞完南墙在回过头找墙撞。
-
-​	3、贪心算法：只看眼前利益，从点看全局。
-
-​	4、二分查找：有序、有界、每次杀一半。
-
+    }
+}
