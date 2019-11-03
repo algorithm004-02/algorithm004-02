@@ -1,0 +1,25 @@
+class Solution {
+    public List<String> generateParenthesis(int n) {
+
+
+        List<String> list = new LinkedList<String>();
+        backtrace("",  list, n*2, 0);
+        return  list;
+
+    }
+
+    public void backtrace(String s, List<String> list, int n, int num ){
+        if(s.length() == n && num ==0){
+            list.add(s);
+            return;
+        }
+        if(num < 0 || (s.length() == n && num !=0) ){
+            return;
+        }
+        int v1 = num + 1;
+        int v2 = num - 1;
+        backtrace(s + "(", list, n, v1);
+        backtrace(s + ")", list, n, v2);
+    }
+
+}// 回溯法
