@@ -136,7 +136,7 @@
 | [45. 跳跃游戏 II](https://leetcode-cn.com/problems/jump-game-ii/) | | javaScript |
 | [（参考）322. 零钱兑换](https://leetcode-cn.com/problems/coin-change/) | | javaScript |
 
-| Week03 | 第10课 | 贪心算法 |
+| Week03 | 第11课 | 二分查找 |
 | :---: | --- | --- |
 | 实战题目 | 标签 | 实现 |
 | [69. x 的平方根](https://leetcode-cn.com/problems/sqrtx/) | | javaScript |
