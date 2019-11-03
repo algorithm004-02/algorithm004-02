@@ -31,3 +31,11 @@
 1. 目标函数存在单调性（单调递增、递减等），无需的情况只能进行遍历
 2. 存在上下边界（bounded），搜索时将收缩区域由边界向最终结果收缩
 3. 能够通过索引访问（index accessible）
+
+# 同学代码、总结Review
+
+1. [https://github.com/algorithm004-02/algorithm004-02/issues/561#issuecomment-549113830](https://github.com/algorithm004-02/algorithm004-02/issues/561#issuecomment-549113830)
+2. [https://github.com/algorithm004-02/algorithm004-02/issues/565#issuecomment-549113686](https://github.com/algorithm004-02/algorithm004-02/issues/565#issuecomment-549113686)
+3. [https://github.com/algorithm004-02/algorithm004-02/issues/550#issuecomment-549114103](https://github.com/algorithm004-02/algorithm004-02/issues/550#issuecomment-549114103)
+4. [https://github.com/algorithm004-02/algorithm004-02/issues/551#issuecomment-549114175](https://github.com/algorithm004-02/algorithm004-02/issues/551#issuecomment-549114175)
+5. [https://github.com/algorithm004-02/algorithm004-02/issues/548#issuecomment-549114286](https://github.com/algorithm004-02/algorithm004-02/issues/548#issuecomment-549114286)
