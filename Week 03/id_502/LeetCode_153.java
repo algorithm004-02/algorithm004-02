@@ -6,7 +6,7 @@ class Solution {
         
         int mid = nums.length/2;
         if(nums.length <= (mid + 1)) {
-            //<=两个
+            //=两个
             if (nums[mid] > nums[mid - 1]) {
                 return nums[mid - 1];
             }
@@ -17,8 +17,6 @@ class Solution {
                 && nums[mid] < nums[mid + 1]
                 && nums[mid] > nums[mid - 1]) {
                 return nums[0];
-            } else {
-                
             }
             return nums[mid];
         }
