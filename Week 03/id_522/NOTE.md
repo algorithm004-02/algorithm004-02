@@ -212,3 +212,33 @@ class Solution:
         return res
 
 ```
+11-1 继续看二分
+#看了国际站后，服了。
+
+class Solution:
+
+    def binsearch(self, nums, target):
+        size = len(nums)
+        left, right = 0, size - 1
+        # find the min
+        while left < right :
+            mid = left + right >> 1
+
+            if nums[mid] > nums[right]:
+                left = mid + 1
+            else:
+                right = mid
+
+        mmin = left
+
+        left, right = 0, size - 1  #  ，must do it again
+        while left <= right:    #这里的= ，必须的，我忘记了。
+            mid = left + right >> 1
+            real = (mid + mmin) % size   #魔法，漂亮
+
+            if nums[real] == target: return real
+            if nums[real] > target:
+                right = mid - 1
+            else:
+                left = mid + 1
+        return -1
