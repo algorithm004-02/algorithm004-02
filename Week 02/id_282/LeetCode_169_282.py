@@ -5,8 +5,10 @@ class Solution:
     分治
     '''
     def majorityElement(self, nums: List[int]) -> int:
-        if not nums: return 
-        if len(nums) == 1: return nums[0]
+        if not nums: 
+            return 
+        if len(nums) == 1: 
+            return nums[0]
         left = self.majorityElement(nums[:len(nums)//2])
         right = self.majorityElement(nums[len(nums)//2:])
         if left == right:
