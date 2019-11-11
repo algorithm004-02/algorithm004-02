@@ -30,7 +30,7 @@ func main(){
 	nums := []int{1,2}
 	step := 3
 	rotateArray(nums, step)
-	fmt.Println(nums)447
+	fmt.Println(nums)
 }
 
 func rotateArray(nums []int, k int) {
