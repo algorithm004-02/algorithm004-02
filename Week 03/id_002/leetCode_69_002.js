@@ -4,27 +4,27 @@
  * @param {number} x
  * @return {number}
  */
+/**
+ * @param {number} x
+ * @return {number}
+ */
 var mySqrt = function(x) {
-    if (x === 0 || x === 1) {
-        return x;
-    }
-    
     let left = 0;
     let right = x;
     
-    while (Math.floor(right) - Math.floor(left) != 0) {
-        let mid = left + (right - left) / 2;
+    while(left <= right) {
+        let mid = (left + right) / 2 | 0;
         
-        if (mid * mid == x) {
-            return mid;
+        if (mid * mid < x) {
+            left = mid + 1;
         } else if (mid * mid > x) {
-            right = mid;
+            right = mid - 1;
         } else {
-            left = mid;
+            return mid;
         }
     }
     
-    return Math.floor(right);
+    return right;
 };
 
 /**
