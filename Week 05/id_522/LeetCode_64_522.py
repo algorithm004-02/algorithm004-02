@@ -1,5 +1,25 @@
 # 64
 
+# 6th
+
+class Solution:
+    def minPathSum(self, grid: List[List[int]]) -> int:
+        yy = len(grid)
+        if yy == 1:
+            return sum(grid[0])
+        xx = len(grid[0])
+        dp = [[0 for i in range(xx)] for j in range(yy)]
+        dp[0][0] = grid[0][0]
+        # 初始化上边
+        for y in range(1, yy): dp[y][0] = dp[y - 1][0] + grid[y][0]
+        # 初始化左边
+        for x in range(1, xx): dp[0][x] = dp[0][x - 1] + grid[0][x]
+
+        for x in range(1, xx):
+            for y in range(1, yy):
+                dp[y][x] = grid[y][x] + min(dp[y - 1][x], dp[y][x - 1])
+
+        return dp[y][x]
 
 # 第一遍
 '''
@@ -120,7 +140,7 @@ class Solution:
 
 # 5th  98.48     112ms
 
-
+'''
 class Solution:
     def minPathSum(self, grid: List[List[int]]) -> int:
         if not grid: return 0
@@ -144,3 +164,4 @@ class Solution:
                 dp[y][x] = min(dp[y + 1][x], dp[y][x + 1]) + grid[y][x]
         # print(dp)
         return dp[0][0]
+'''
