@@ -38,7 +38,7 @@ class Solution:
         for y in range(0, yy):
             for x in range(0, xx):
                 if x * y == 0:
-                    dp[y][x] = int(matrix[y][x])
+                    dp[y][x] = int(matrix[y][x]) # 初始化
                 elif matrix[y][x] == "1":
                     dp[y][x] = min(dp[y - 1][x], dp[y - 1][x - 1], dp[y][x - 1]) + 1
 
