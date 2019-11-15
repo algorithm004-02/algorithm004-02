@@ -2,6 +2,17 @@
 
  
 ### DP方程
+- [120. 三角形最小路径和](https://leetcode-cn.com/problems/triangle/description/)
+```
+    1. 暴力
+    2. DP：
+        a. 分治（子问题) 
+            problem(i, j) = Min(sub(i + 1, j), sub(i + 1, j + 1)) + a[i, j]
+        b. 状态数组定义 f[i, j]
+        c. DP方程 
+            f(i, j) = Min(f(i + 1, j), f(i + 1, j + 1)) + a[i, j]
+```
+
 - [53.最大子序和](https://leetcode-cn.com/problems/maximum-subarray/)
  ```
      1. 暴力
