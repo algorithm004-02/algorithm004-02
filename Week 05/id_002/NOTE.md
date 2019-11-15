@@ -10,13 +10,18 @@
          b. 状态数组定义   f[i]
          c. DP方程        f[i] = Max(f[i - 1], 0) + a[i]
 ```
+
 - [152.乘积最大子序列](https://leetcode-cn.com/problems/maximum-product-subarray/submissions/)
  ```
      1. 暴力
      2. DP：
          a. 分治（子问题)
-         b. 状态数组定义
-         c. DP方程
+             res = [number[i], number[i] * a[i - 1][0], number[i] * a[i - 1][1]]
+             a[i] = [Min(res), Max(res)]
+         b. 状态数组定义 f[i] = [minVal, maxVal]
+         c. DP方程 
+              res = [number[i], number[i] * f[i - 1][0], number[i] * f[i - 1][1]]
+              f[i] = [Min(res), Max(res)]
 ```
 
 - [322. 零钱兑换](https://leetcode-cn.com/problems/coin-change/)
