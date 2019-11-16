@@ -53,7 +53,7 @@ class Solution:
 整体代码，下标 的难度降低了。好。
 
 ##在这个题目中，我的心得是，对于二维的，一定要用x，横坐标，y 纵坐标，比i ，j 要好很多。
-
+```
 class Solution:
     def minPathSum(self, grid: List[List[int]]) -> int:
         yy=len(grid)
@@ -72,9 +72,9 @@ class Solution:
                 dp[y][x]=grid[y][x] +min(dp[y-1][x],dp[y][x-1])
 
         return dp[y][x]
-
+```
 ####这是从右下角，向左上角推，明显看出，下标写法，难度大。--一对比就看出来了。
-
+```
 class Solution:
     def minPathSum(self, grid: List[List[int]]) -> int:
         if not grid:return 0
@@ -98,9 +98,10 @@ class Solution:
                 dp[y][x]= min(dp[y+1][x],dp[y][x+1]) + dp[y][x]
         #print(dp)
         return dp[0][0]
-
+```
 ##--------------------------------------------------------------------------------
 #这是 91 题。
+```
     def numDecodings(self, s: str) -> int:
         if not s or s[0]=='0':
             return 0
@@ -119,10 +120,11 @@ class Solution:
                 dp[i] += dp[i - 2]     #我错在这个地方
 
         return dp[-1]
-
+```
 周四下午，把120题，70题，手撕了。
 
 爬楼梯
+```
 class Solution(object):
     def climbStairs(self, n):
         if n<3 : return n
@@ -130,6 +132,41 @@ class Solution(object):
         for _ in range(2,n):
             x,y=y,x+y
         return y
-        
+```
+周五下午，学习309题，理解了改变顺序，由6次赋值，改为4次。
 
+# 涉及到了前天的事情，所以，需要处理四个变量。一天记录2个变量。两天的，昨天和前天的。
+#疯了一样的压缩，然后，先后顺序调整，把6次赋值，变为4次 ，变量名精简，当然要写注释多，看第21行吧
+#执行用时 :40 ms, 在所有 python3 提交中击败了99.71%的用户
+```
+class Solution:
+    def maxProfit(self,p):
+        s=0
+        s2=0
+        b=-99999
+        b2=0
+        for v in p:
+            b2=b
+            if b<s2-v:b=s2-v
+            s2=s
+            if s<b+v:s=b+v
+        return s
 
+#精简，执行用时 :44 ms, 在所有 python3 提交中击败了99.12%的用户
+
+class Solution:
+    def maxProfit(self, p):
+        s1=0   #昨天卖出后
+        s2=0   #前天卖出后
+        b1=-99999   #昨天买入后的收益
+        b2=-99999   #前天买入后的收益   2 是向左两天的意思
+        for v in p:
+            ts1=s1
+            tb1=b1
+            if s1<b1+v:s1=b1+v  #不使用max()
+            if b1<s2-v:b1=s2-v
+            s2=ts1
+            b2=tb1
+        return s1
+
+```

@@ -68,4 +68,17 @@ class Solution:
         for v in prices:
             x,y = max(x,y+v) ,max(y,-v)
         return x
+        
+ 5th  68ms
+ 
+class Solution:
+    def maxProfit(self,p):
+        big=0
+        low=float("inf")
+        for i in p:
+            big=max(big,i-low)
+            low=min(low,i)
+        return big       
+        
+        
 '''
