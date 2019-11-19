@@ -109,3 +109,19 @@ DP: (123 最多2笔交易)
 
         f[i][2][0] = Max(f[i - 1][2][0], f[i - 1][1][1] + prices[i])
 ```
+- [32.最长有效括号](https://leetcode-cn.com/problems/longest-valid-parentheses/submissions/)
+```
+我们用 dp[i] 表示以 i 结尾的最长有效括号；
+当 s[i] 为 (,dp[i] 必然等于 0，因为不可能组成有效的括号；
+那么 s[i] 为 )
+2.1 当 s[i-1] 为 (，那么 dp[i] = dp[i-2] + 2；
+2.2 当 s[i-1] 为 ) 并且 s[i-dp[i-1] - 1] 为 (，那么 dp[i] = dp[i-1] + 2 + dp[i-dp[i-1]-2]；....()) dp[i - 1]前一个字符 '('
+2.2 注意边界问题 dp[i - 2] 与 dp[i - dp[i - 1] - 2] 越界问题
+DP:
+    a. 重复子问题
+        dp[i] = dp[i - 2] + 2 || dp[i-1] + 2 + dp[i-dp[i-1]-2]      
+    b. 定义状态数组
+        fn[i]
+    c. DP方程
+        f[i] = dp[i - 2] + 2 || dp[i - 1] + 2 + dp[i - dp[i - 1] - 2]
+```
