@@ -109,6 +109,37 @@ DP: (123 最多2笔交易)
         f[i][1][1] = Max(f[i - 1][1][1], f[i - 1][1][0] - prices[i])
 
         f[i][2][0] = Max(f[i - 1][2][0], f[i - 1][1][1] + prices[i])
+
+
+DP: (188 最多k笔交易)
+    a. 重复子问题
+        for k range(K) :
+            k === 0
+            maxPro[i][0][0] = maxPro[i - 1][0][0]
+            maxPro[i][0][1] = Math.max(maxPro[i - 1][0][1], maxPro[i - 1][0][0] - prices[i])
+            k > 0
+            maxPro[i][k][0] = Math.max(maxPro[i - 1][k][0], maxPro[i - 1][k - 1][1] + prices[i])
+            maxPro[i][k][1] = Math.max(maxPro[i - 1][k][1], maxPro[i - 1][k][0] - prices[i])
+
+    b. 定义状态数组
+        f[i][k][j]
+            i: 第几天
+            k: 
+                0： 0次交易
+                1： 第一次交易
+                2： 第二次交易
+            j: 
+                0: 没有持有股票
+                1： 持有股票
+    c. DP方程
+        for k Range(k) :
+            k === 0
+            f[i][0][0] = f[i - 1][0][0]
+            f[i][0][1] = Max(f[i - 1][0][1], f[i - 1][0][0] - prices[i])
+
+            k > 0
+            f[i][k][0] = Max(f[i - 1][k][0], f[i - 1][k - 1][1] + prices[i])
+            f[i][k][1] = Max(f[i - 1][k][1], f[i - 1][k][0] - prices[i])
 ```
 - [32.最长有效括号](https://leetcode-cn.com/problems/longest-valid-parentheses/submissions/)
 ```
