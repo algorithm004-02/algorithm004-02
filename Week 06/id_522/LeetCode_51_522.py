@@ -1,4 +1,23 @@
 #难度大,,对撇捺的理解，很重要
+
+#60ms
+class Solution:
+    def solveNQueens(self,n):
+        r=[]
+        def dfs(q,cha,he):
+            y=len(q)
+            if y==n: #8
+                r.append(["."*i +"Q"+"."*(n-1-i) for i in q])
+                return
+            for x in range(n):
+                if x not in q and y-x not in cha and y+x not in he:
+                    dfs(q+[x],cha|{y-x},he|{y+x})
+        dfs([],set(),set())
+        return r
+
+
+
+'''
 class Solution:
     def solveNQueens(self,n):
         r=[]
@@ -13,7 +32,7 @@ class Solution:
                     dfs(q+[x],cha+[y-x],he+[y+x])
         dfs([],[],[])
         return r
-'''
+
 class Solution:
     def solveNQueens(self, n):
         res=[]
