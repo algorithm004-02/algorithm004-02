@@ -1,3 +1,58 @@
+#最好成绩为80ms 。直接用heapq
+from heapq import heappush, heappop
+class Solution:
+    def solveSudoku(self, board) :
+        row = [set(range(1, 10)) for _ in range(9)] 
+        col = [set(range(1, 10)) for _ in range(9)]
+        z = [set(range(1, 10)) for _ in range(9)]
+        wu = []
+        for i in range(9):
+            for j in range(9):
+                if board[i][j] != '.':
+                    v = int(board[i][j])
+                    row[i].remove(v)
+                    col[j].remove(v)
+                    z[(i // 3)*3 + j // 3].remove(v)
+                else:
+                    wu.append((i, j))    #empty=wu
+        you=[]
+        for i,j in wu:
+            b = (i // 3)*3 + j // 3
+            ans=row[i] & col[j] & z[b]
+            p=len(ans)
+            heappush(you,(p,i,j,b))   # data input the heapq ,you
+        w=[]
+        while len(you):
+            p,i,j,b=heappop(you)     #data output to w ,w is list
+            w.append((i,j,b))
+        
+        def ba(n=0):
+            if n == len(w):
+                return True
+            i,j,b = w[n]              #b  不要重复计算啦
+            for v in row[i] & col[j] & z[b]:
+                row[i].remove(v)
+                col[j].remove(v)
+                z[b].remove(v)
+                board[i][j] = str(v)
+                if ba(n+1):return True
+                row[i].add(v)
+                col[j].add(v)
+                z[b].add(v)
+            return False
+        ba()
+
+
+'''
+
+cd=Solution()
+boardboard=[["5","3",".",".","7",".",".",".","."],["6",".",".","1","9","5",".",".","."],[".","9","8",".",".",".",".","6","."],
+            ["8",".",".",".","6",".",".",".","3"],["4",".",".","8",".","3",".",".","1"],["7",".",".",".","2",".",".",".","6"],
+            [".","6",".",".",".",".","2","8","."],[".",".",".","4","1","9",".",".","5"],[".",".",".",".","8",".",".","7","9"]]
+
+cd.solveSudoku(boardboard)
+
+
 #37数独 解法，，，92ms  ， 原作者，最好成绩为88ms 。如果直接用heapq ，有机会尝试一下，
 from heapq import heappush, heappop
 class PriorityQueue:
@@ -17,7 +72,7 @@ class PriorityQueue:
         return len(self.heap)
 
 class Solution:
-    def solveSudoku(self, board: List[List[str]]) -> None:
+    def solveSudoku(self, board) :
         row = [set(range(1, 10)) for _ in range(9)]  # 行剩余可用数字
         col = [set(range(1, 10)) for _ in range(9)]  # 列剩余可用数字
         block = [set(range(1, 10)) for _ in range(9)]  # 块剩余可用数字
@@ -33,7 +88,8 @@ class Solution:
                 else:
                     empty.append((i, j))
 
-        you=PriorityQueue()
+        #you=PriorityQueue()
+        you=[]
         for i,j in empty:
             b = (i // 3)*3 + j // 3
             ans=row[i] & col[j] & block[b]#计算它，保存它
@@ -42,10 +98,11 @@ class Solution:
                # t=ans.pop()
                # board[i][j]=str(t)  #直接写上，不进入回溯了。
             #else:
-            you.add((i,j,b),pp)           #进入堆，进行重新优先级排序
+            #you.add((i,j,b),pp)           #进入堆，进行重新优先级排序
+            heappush(you,pp,(i,j,b))
         ee=[]
         while len(you):
-            i, j,b=you.pop()
+            i, j,b=heappop(you)
             ee.append((i,j,b))        #-----把 b 放进去，是优化思想
 
         def backtrack(iter=0):
@@ -66,7 +123,7 @@ class Solution:
         backtrack()
 #作者：yybeta   -----在下面
 
-'''
+
 class Solution:   
     def solveSudoku(self, board: List[List[str]]) -> None:
            row = [set(range(1, 10)) for _ in range(9)]  # 行剩余可用数字
