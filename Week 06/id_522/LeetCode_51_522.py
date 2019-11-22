@@ -1,6 +1,8 @@
 #难度大,,对撇捺的理解，很重要
 
-#60ms
+#满足条件，就向下一行去处理，并且把当前的整体情况，都带着，就不用回溯了。
+#后面尝试了集合，速度不快，
+#60ms  dfs
 class Solution:
     def solveNQueens(self,n):
         r=[]
@@ -10,11 +12,10 @@ class Solution:
                 r.append(["."*i +"Q"+"."*(n-1-i) for i in q])
                 return
             for x in range(n):
-                if x not in q and y-x not in cha and y+x not in he:
+                if x not in q and y-x not in cha and y+x not in he: #剪枝
                     dfs(q+[x],cha|{y-x},he|{y+x})
         dfs([],set(),set())
         return r
-
 
 
 '''

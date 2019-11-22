@@ -10,16 +10,16 @@ class Solution(object):
         while front:
             dist += 1
             next_front = set()
-            for word in front:
-                for i in range(word_len):
-                    for c in "abcdefghigklmnopqrstuvwxyz":
-
-                        new_word = word[:i]+c+word[i+1:]
-                        if new_word in back:
-                            return dist
-                        if new_word in wordList:
-                            next_front.add(new_word)
-                            wordList.remove(new_word)
+            for word in front: #对每一个单词都要处理
+                for i in range(word_len): #对每一个单词替换每一个字母
+                    for c in "abcdefghigklmnopqrstuvwxyz": #每次尝试26个
+                        if c !=word[i]:  #去掉这个更快。
+                            new_word = word[:i]+c+word[i+1:]
+                            if new_word in back:
+                                return dist
+                            if new_word in wordList:
+                                next_front.add(new_word)
+                                wordList.remove(new_word)
             front = next_front
             if len(back)<len(front):
                 front, back = back, front

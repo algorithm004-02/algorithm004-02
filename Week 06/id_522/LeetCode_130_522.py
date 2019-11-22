@@ -1,7 +1,40 @@
 #这道题，准备用dfs， 和并差集来做,,结论是并差集，慢的很。
 
-#dfs
+#dfs  找到一个地方可以优化，把O(m*n) 转换为O(m+n)  168ms
 
+class Solution:
+    def solve(self, b):
+        if not b :return
+        yy=len(b)
+        xx=len(b[0])
+        def dfs(b,y,x):
+            #终止条件
+            if y<0 or y>=yy or x<0 or x>=xx or b[y][x] in {"X" ,'#'}:return
+
+            b[y][x] = '#'
+            #dfs其他四个方向
+            dfs(b,y-1,x)
+            dfs(b,y+1,x)
+            dfs(b,y,x-1)
+            dfs(b,y,x+1)
+        ss=[]
+        for y in range(yy):
+            ss.append((y,0))
+            ss.append((y,xx-1))
+        for x in range(xx):
+            ss.append((0,x))
+            ss.append((yy-1,x))
+        for y,x in ss:
+            if b[y][x]=="O":
+                dfs(b,y,x)
+        for y in range(yy):
+            for x in range(xx):
+                if b[y][x] =="#":b[y][x] ="O"
+                elif b[y][x] =="O" :b[y][x] ="X"
+
+
+
+'''
 class Solution:
     def solve(self, board: List[List[str]]) -> None:
         """
@@ -12,7 +45,7 @@ class Solution:
         xx=len(board[0])
         def dfs(board,y,x):
             #终止条件
-            if y<0 or y>=yy or x<0 or x>=xx or board[y][x] =="X" or board[y][x] == '#':
+            if y<0 or y>=yy or x<0 or x>=xx or board[y][x] in {"X" ,'#'}:
                 return
             board[y][x] = '#'
             #dfs其他四个方向
@@ -20,17 +53,31 @@ class Solution:
             dfs(board,y+1,x)
             dfs(board,y,x-1)
             dfs(board,y,x+1)
-        #遍历
+        ss=[]
         for y in range(yy):
-            for x in range(xx):
-                if (x==0 or y==0 or x==xx-1 or y==yy-1 ) and board[y][x] =="O":
-                    dfs(board,y,x)
+            #x=0
+            #x2=xx-1
+            ss.append((y,0))
+            ss.append((y,xx-1))
+        for x in range(xx):
+            #y2=yy-1
+            ss.append((0,x))
+            ss.append((yy-1,x))
+
+        #遍历
+        #for y in range(yy):
+           # for x in range(xx):
+               # if (x==0 or y==0 or x==xx-1 or y==yy-1 ) and board[y][x] =="O":
+                  #  dfs(board,y,x)
+        for y,x in ss:
+            if board[y][x] =="O":dfs(board,y,x)
+
         #恢复
         for y in range(yy):
             for x in range(xx):
                 if board[y][x] =="#":board[y][x] ="O"
                 elif board[y][x] =="O" :board[y][x] ="X"
-
+'''
 
 ''' 404ms , slowly
 class Solution:

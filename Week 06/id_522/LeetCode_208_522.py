@@ -34,7 +34,7 @@ class Trie:
         for w in prefix:
             if w not in node:return False
             node=node[w]
-        return True      
+        return True   #=================不同点
 # Your Trie object will be instantiated and called as such:
 # obj = Trie()
 # obj.insert(word)

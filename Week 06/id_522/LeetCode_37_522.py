@@ -1,4 +1,45 @@
-#最好成绩为80ms 。直接用heapq
+#最好成绩为76ms 。直接用heapq
+
+from heapq import heappush, heappop
+class Solution:
+    def solveSudoku(self, board) :
+        y=[set(range(1, 10)) for _ in range(9)]
+        x=[set(range(1, 10)) for _ in range(9)]
+        z=[set(range(1, 10)) for _ in range(9)]
+        w = []
+        for i in range(9):
+            for j in range(9):
+                if board[i][j]=='.':w.append((i, j))
+                else:
+                    v=int(board[i][j])
+                    y[i].remove(v)
+                    x[j].remove(v)
+                    b=(i//3)*3+j//3
+                    z[b].remove(v)
+        yo=[]
+        for i,j in w:
+            b=(i//3)*3+j//3
+            ans=y[i] & x[j] & z[b]
+            p=len(ans)
+            heappush(yo,(p,i,j,b))
+        w=[]
+        while len(yo):
+            p,i,j,b=heappop(yo)
+            w.append((i,j,b))
+        def ba(n=0):
+            if n == len(w):return True
+            i,j,b = w[n]
+            for v in y[i] & x[j] & z[b]:
+                y[i].remove(v)
+                x[j].remove(v)
+                z[b].remove(v)
+                board[i][j] = str(v)
+                if ba(n+1):return True
+                y[i].add(v)
+                x[j].add(v)
+                z[b].add(v)
+        ba()
+'''
 from heapq import heappush, heappop
 class Solution:
     def solveSudoku(self, board) :
@@ -43,7 +84,7 @@ class Solution:
         ba()
 
 
-'''
+
 
 cd=Solution()
 boardboard=[["5","3",".",".","7",".",".",".","."],["6",".",".","1","9","5",".",".","."],[".","9","8",".",".",".",".","6","."],

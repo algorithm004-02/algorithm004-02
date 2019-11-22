@@ -299,4 +299,40 @@ class Solution:
                     count+=1
                     bfs(y,x)
         return count
+        
+        
+'''
+'''
+class Solution:
+    def numIslands(self, grid: List[List[str]]) -> int:
+        yy = len(grid)
+        # 特判
+        if yy == 0:  return 0
+        xx = len(grid[0])
+        marked = [[False for _ in range(xx)] for _w in range(yy)]
+        count = 0
+        q=[]
+        def dodo(t0y,t0x):
+            if  -1<t0y <yy and -1<t0x<xx and not marked[t0y][t0x] and grid[t0y][t0x]=="1":
+                marked[t0y][t0x]=True
+                q.append((t0y,t0x))
+
+        def bfs(y,x):
+            q.append((y,x))
+            while q:
+                ll=len(q)
+                for i in range(ll):
+                    cury,curx =q.pop(0)
+                    marked[cury][curx]=True
+                    # 东南西北
+                    dodo(cury,curx+1)
+                    dodo(cury+1,curx)
+                    dodo(cury-1,curx)
+                    dodo(cury,curx-1)
+        for y in range(yy):
+            for x in range(xx):
+                if not marked[y][x] and grid[y][x]=="1":
+                    count+=1
+                    bfs(y,x)
+        return count
 '''
