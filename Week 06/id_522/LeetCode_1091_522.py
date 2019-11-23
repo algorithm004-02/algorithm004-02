@@ -24,7 +24,9 @@ class Solution:
                 pa.append(end)
             return len(pa)+1
         s ,v = len(grid),set()
-        came_from = {};juli = {(0, 0): 0};pp=[]
+        came_from = {}
+        juli = {(0, 0): 0}
+        pp=[]
         heappush(pp,(0,0,0))
         d8 = ((1, 1), (1, 0), (0, 1), (1, -1), (-1, 1), (0, -1), (-1, 0), (-1, -1))
 
@@ -209,3 +211,55 @@ class Solution:
 
         return -1 
         '''
+'''
+周六晚上，突然，想用并差集，双向BFS 解决一下，1091 用了一个多小时，速度不快，800ms
+
+我分析的时间复杂度，在O(n^2)  n是矩阵边长。
+这么分析的，虽然while 那里不好分析，我认为，每次处理后，visited 最少加一，
+如果不加，ss是空集，while 就停止了。
+一共有 n*n 个格子，所以，时间复杂度O(8*n*n) 也就是 O(n^2)
+
+class Solution:
+    def shortestPathBinaryMatrix(self, g):
+        #some special case 
+        if g[0][0] == 1: return -1
+        s = len(g)
+        if s==1:return 1 #g=[[0]]
+        if g[s-1][s-1] == 1: return -1
+        #ss =start ，dd=end 
+        ss,dd=set(),set()   
+        ss.add((0,0))
+        dd.add((s-1,s-1))
+        visited=set()
+        #donot change the grid 
+        #g[0][0] = 1  
+        #g[s-1][s-1]=1
+        visited.add((0,0))
+        visited.add((s-1,s-1))
+        for y in range(s):
+            for x in range(s):
+                if g[y][x]==1:visited.add((y,x))
+                
+        d8=((1, 1), (1, 0), (0, 1), (1, -1), (-1, 1), (0, -1), (-1, 0), (-1, -1))
+        step=2
+        while ss:
+            t=set()
+            #层序遍历
+            ll=len(ss)
+            for i in range(ll):
+                #集合无序，随便拿出一个
+                y,x=ss.pop()
+                for d in d8:
+                    yy, xx = y + d[0], x + d[1]
+                    #终止情况
+                    if (yy,xx) in dd:return step
+                    
+                    if -1 < xx < s and -1 < yy < s  and (yy,xx) not in visited:
+                        t.add((yy,xx)) 
+                        visited.add((yy,xx))
+            ss=t 
+            if len(ss)>len(dd): ss,dd =dd,ss
+            step+=1
+        return -1
+
+'''
