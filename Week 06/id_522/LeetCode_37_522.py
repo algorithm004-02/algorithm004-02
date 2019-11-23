@@ -39,6 +39,7 @@ class Solution:
                 x[j].add(v)
                 z[b].add(v)
         ba()
+
 '''
 from heapq import heappush, heappop
 class Solution:
@@ -140,10 +141,10 @@ class Solution:
                # board[i][j]=str(t)  #直接写上，不进入回溯了。
             #else:
             #you.add((i,j,b),pp)           #进入堆，进行重新优先级排序
-            heappush(you,pp,(i,j,b))
+            heappush(you,(pp,i,j,b))  #------------------------------carefully
         ee=[]
         while len(you):
-            i, j,b=heappop(you)
+            er,i, j,b=heappop(you)
             ee.append((i,j,b))        #-----把 b 放进去，是优化思想
 
         def backtrack(iter=0):
