@@ -46,3 +46,27 @@ var uniquePaths2 = function(m, n) {
 
     return c[n -1];
 };
+
+/**
+ * DFS
+ * @param {number} m
+ * @param {number} n
+ * @return {number}
+ */
+var uniquePaths3 = function(m, n) {
+    return dfs(m, n, 0, 0, {});
+    
+    function dfs(m, n, r, c, mem) {
+        if (r >= m || c >= n) return 0;
+        
+        if (m - 1 === r && n - 1 === c) return 1;
+        
+        let preX = `${r},${c + 1}`;
+        if (!mem[preX]) mem[preX] = dfs(m, n, r, c + 1, mem);
+        
+        let preY = `${r + 1},${c}`;
+        if (!mem[preY]) mem[preY] = dfs(m, n, r + 1, c, mem);
+        
+        return  mem[preX] + mem[preY];
+    }
+};

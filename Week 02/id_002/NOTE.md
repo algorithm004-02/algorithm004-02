@@ -34,7 +34,8 @@
 | :---: | --- | --- |
 | 实战题目 | 标签 | 实现 |
 | [94.二叉树的中序遍历](https://leetcode-cn.com/problems/binary-tree-inorder-traversal/) | | javascript |
-| [144.二叉树的前序遍历](https://leetcode-cn.com/problems/binary-tree-preorder-traversal/) | | javascript | 
+| [144.二叉树的前序遍历](https://leetcode-cn.com/problems/binary-tree-preorder-traversal/) | | javascript |
+| [145.二叉树的后序遍历](https://leetcode-cn.com/problems/binary-tree-postorder-traversal/) | | javascript |  
 | [590.N叉树的后序遍历](https://leetcode-cn.com/problems/n-ary-tree-postorder-traversal/) | | javascript |
 | [589. N叉树的前序遍历](https://leetcode-cn.com/problems/n-ary-tree-preorder-traversal/description/) | | javascript |
 | [429. N叉树的层序遍历](https://leetcode-cn.com/problems/n-ary-tree-level-order-traversal/) | | javascript |
