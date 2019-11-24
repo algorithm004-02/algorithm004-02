@@ -1,3 +1,6 @@
+#用字典建立trie ，注意最后单词结尾的处理，而后通过dfs 算法处理，注意visited 。
+
+
 class Solution:
     def findWords(self, b, words):
         #build trie
@@ -23,6 +26,7 @@ class Solution:
                     and b[y1][x1] in node \
                     and (y1,x1) not in visited:
                     dfs(y1,x1,node[b[y1][x1]],pre+b[y1][x1],visited|{(y1,x1)})
+
         #Traverse b
         r,yy,xx=set(),len(b),len(b[0])
 
@@ -32,8 +36,6 @@ class Solution:
                     #dfs(y,x,trie,b[y][x],{(y,x)})
                     dfs(y,x,trie[b[y][x]],b[y][x],{(y,x)})
         return list(r)
-
-
 
 '''  虽然可读性大大下降，但是速度没有提高
 
