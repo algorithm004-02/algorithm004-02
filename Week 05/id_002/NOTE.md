@@ -1,7 +1,80 @@
 # NOTE
 
- 
-### DP方程
+## 参考链接
+
+### 12. 动态规划
+* [递归代码模板](http://shimo.im/docs/DjqqGCT3xqDYwPyY/)
+* [分治代码模板](http://shimo.im/docs/3xvghYh3JJPKwdvt/)
+* [动态规划定义](https://en.wikipedia.org/wiki/Dynamic_programming)
+* [MIT 动态规划课程最短路径算法](https://www.bilibili.com/video/av53233912?from=search&seid=2847395688604491997)
+* [三角形最小路径和(top-down, bottom-up)](https://leetcode.com/problems/triangle/discuss/38735/Python-easy-to-understand-solutions-(top-down-bottom-up))
+
+## 代码模板
+
+### 递归代码模板
+* Python 代码模板
+    ```Python
+    def recursion(level, param1, param2, ...): 
+        # recursion terminator 
+        if level > MAX_LEVEL: 
+        process_result 
+        return 
+
+        # process logic in current level 
+        process(level, data...) 
+
+        # drill down 
+        self.recursion(level + 1, p1, ...) 
+
+        # reverse the current level status if needed
+    ```
+* Java 代码模板
+    ```Java
+        public void recur(int level, int param) { 
+
+        // terminator 
+        if (level > MAX_LEVEL) { 
+            // process result 
+            return; 
+        } 
+
+        // process current logic 
+        process(level, param); 
+
+        // drill down 
+        recur( level: level + 1, newParam); 
+
+        // restore current status 
+        
+        }
+        ```
+
+### 分治代码模板
+* Python 代码模板
+    ```Python
+        def divide_conquer(problem, param1, param2, ...): 
+            # recursion terminator 
+            if problem is None: 
+                print_result 
+                return 
+
+            # prepare data 
+            data = prepare_data(problem) 
+            subproblems = split_problem(problem, data) 
+
+            # conquer subproblems 
+            subresult1 = self.divide_conquer(subproblems[0], p1, ...) 
+            subresult2 = self.divide_conquer(subproblems[1], p1, ...) 
+            subresult3 = self.divide_conquer(subproblems[2], p1, ...) 
+            …
+
+            # process and generate the final result 
+            result = process_result(subresult1, subresult2, subresult3, …)
+                
+            # revert the current level states
+    ```
+
+## DP方程
 - [120. 三角形最小路径和](https://leetcode-cn.com/problems/triangle/description/)
 ```
     1. 暴力
@@ -157,3 +230,18 @@ DP:
     c. DP方程
         f[i] = dp[i - 2] + 2 || dp[i - 1] + 2 + dp[i - dp[i - 1] - 2]
 ```
+
+## 实战题目
+| Week06 | 第12课 | 动态规划 |
+| :---: | --- | --- |
+| [62. 不同路径](https://leetcode-cn.com/problems/unique-paths/) | DFS\DP | JavaScript |
+| [63. 不同路径 II](https://leetcode-cn.com/problems/unique-paths-ii/submissions/) | DFS\DP | JavaScript |
+| [1143. 最长公共子序列](https://leetcode-cn.com/problems/longest-common-subsequence/) | DP | JavaScript |
+| [70. 爬楼梯](https://leetcode-cn.com/problems/climbing-stairs/description/) | DFS\DP | JavaScript |
+| [120. 三角形最小路径和](https://leetcode-cn.com/problems/triangle/description/) | DP | JavaScript |
+| [53. 最大子序和](https://leetcode-cn.com/problems/maximum-subarray/) | DP | JavaScript |
+| [152. 乘积最大子序列](https://leetcode-cn.com/problems/maximum-product-subarray/description/) | DP | JavaScript |
+| [322. 零钱兑换](https://leetcode-cn.com/problems/coin-change/) | | JavaScript |
+| [198. 打家劫舍](https://leetcode-cn.com/problems/house-robber/) | | JavaScript |
+| [213. 打家劫舍 II](https://leetcode-cn.com/problems/house-robber-ii/description/) | | JavaScript |
+| [121. 买卖股票的最佳时机](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/#/description) | | JavaScript |
