@@ -185,4 +185,3 @@ def DFS(self, tree):
 | [433. 最小基因变化](https://leetcode-cn.com/problems/minimum-genetic-mutation/) | 双向BFS\BFS | JavaScript |
 | [1091. 二进制矩阵中的最短路径](https://leetcode-cn.com/problems/shortest-path-in-binary-matrix/) | BFS\A* | JavaScript |
 | [773. 滑动谜题](https://leetcode-cn.com/problems/sliding-puzzle/) | A* | JavaScript |
-
