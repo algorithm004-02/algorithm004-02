@@ -8,6 +8,7 @@
 * [动态规划定义](https://en.wikipedia.org/wiki/Dynamic_programming)
 * [MIT 动态规划课程最短路径算法](https://www.bilibili.com/video/av53233912?from=search&seid=2847395688604491997)
 * [三角形最小路径和(top-down, bottom-up)](https://leetcode.com/problems/triangle/discuss/38735/Python-easy-to-understand-solutions-(top-down-bottom-up))
+* [一个方法团灭 6 道股票问题](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/solution/yi-ge-fang-fa-tuan-mie-6-dao-gu-piao-wen-ti-by-l-3/)
 
 ## 代码模板
 
@@ -234,14 +235,39 @@ DP:
 ## 实战题目
 | Week06 | 第12课 | 动态规划 |
 | :---: | --- | --- |
-| [62. 不同路径](https://leetcode-cn.com/problems/unique-paths/) | DFS\DP | JavaScript |
-| [63. 不同路径 II](https://leetcode-cn.com/problems/unique-paths-ii/submissions/) | DFS\DP | JavaScript |
 | [1143. 最长公共子序列](https://leetcode-cn.com/problems/longest-common-subsequence/) | DP | JavaScript |
 | [70. 爬楼梯](https://leetcode-cn.com/problems/climbing-stairs/description/) | DFS\DP | JavaScript |
 | [120. 三角形最小路径和](https://leetcode-cn.com/problems/triangle/description/) | DP | JavaScript |
 | [53. 最大子序和](https://leetcode-cn.com/problems/maximum-subarray/) | DP | JavaScript |
 | [152. 乘积最大子序列](https://leetcode-cn.com/problems/maximum-product-subarray/description/) | DP | JavaScript |
-| [322. 零钱兑换](https://leetcode-cn.com/problems/coin-change/) | | JavaScript |
 | [198. 打家劫舍](https://leetcode-cn.com/problems/house-robber/) | | JavaScript |
 | [213. 打家劫舍 II](https://leetcode-cn.com/problems/house-robber-ii/description/) | | JavaScript |
 | [121. 买卖股票的最佳时机](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/#/description) | | JavaScript |
+| [122. 买卖股票的最佳时机 II](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-ii/) | | JavaScript |
+| [123. 买卖股票的最佳时机 III](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iii/) | | JavaScript |
+| [309. 最佳买卖股票时机含冷冻期](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/) | | JavaScript |
+| [188. 买卖股票的最佳时机 IV](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iv/) | | JavaScript |
+| [714. 买卖股票的最佳时机含手续费](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/) | | JavaScript |
+| [32. 最长有效括号](https://leetcode-cn.com/problems/longest-valid-parentheses/) | DP | JavaScript |
+| [64. 最小路径和](https://leetcode-cn.com/problems/minimum-path-sum/) | DP | JavaScript |
+| [72. 编辑距离](https://leetcode-cn.com/problems/edit-distance/) | DP | JavaScript |
+| [91. 解码方法](https://leetcode-cn.com/problems/decode-ways/) | DP | JavaScript |
+| [221. 最大正方形](https://leetcode-cn.com/problems/maximal-square/) | | JavaScript |
+| [363. 矩形区域不超过 K 的最大数值和](https://leetcode-cn.com/problems/max-sum-of-rectangle-no-larger-than-k/) | | JavaScript |
+| [403. 青蛙过河](https://leetcode-cn.com/problems/frog-jump/) | | JavaScript |
+| [410. 分割数组的最大值](https://leetcode-cn.com/problems/split-array-largest-sum/) | | JavaScript |
+| [552. 学生出勤记录 II](https://leetcode-cn.com/problems/student-attendance-record-ii/) | | JavaScript |
+| [621. 任务调度器](https://leetcode-cn.com/problems/task-scheduler/) | | JavaScript |
+| [647. 回文子串](https://leetcode-cn.com/problems/palindromic-substrings/) | | JavaScript |
+| [76. 最小覆盖子串](https://leetcode-cn.com/problems/minimum-window-substring/) | | JavaScript |
+| [312. 戳气球](https://leetcode-cn.com/problems/burst-balloons/) | | JavaScript |
+| 高级 DP| 标签 | 实现 |
+| [279. 完全平方数](https://leetcode-cn.com/problems/perfect-squares/submissions/) | | JavaScript |
+| [72. 编辑距离](https://leetcode-cn.com/problems/edit-distance/) | 重点DP | JavaScript |
+| [55. 跳跃游戏](https://leetcode-cn.com/problems/jump-game/) | | JavaScript |
+| [45. 跳跃游戏 II](https://leetcode-cn.com/problems/jump-game-ii/submissions/) | | JavaScript |
+| [62. 不同路径](https://leetcode-cn.com/problems/unique-paths/) | | JavaScript | 
+| [63. 不同路径 II](https://leetcode-cn.com/problems/unique-paths-ii/submissions/) | DFS\DP | JavaScript |
+| [980. 不同路径 III](https://leetcode-cn.com/problems/unique-paths-iii/) | | JavaScript |
+| [322. 零钱兑换](https://leetcode-cn.com/problems/coin-change/) | | JavaScript |
+| [518. 零钱兑换 II](https://leetcode-cn.com/problems/coin-change-2/) | | JavaScript |
