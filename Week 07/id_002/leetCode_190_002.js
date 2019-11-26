@@ -1,6 +1,8 @@
 /**  */
+
 // 1. 位移 + 拼接
 // 2. 位移 + 换位
+// 3. 单次遍历，首位两处同时对调。
 
 /**
  * 1. 位移 + 拼接
@@ -36,6 +38,7 @@ var reverseBits = function(n) {
 };
 
 /**
+ * 3. 单次遍历，首位两处同时对调。
  * @param {number} n - a positive integer
  * @return {number} - a positive integer
  */
