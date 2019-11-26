@@ -5,10 +5,41 @@
 主要精力，还是要放在老师说的NLOGN 算法上。
 LRU 在python 中，正好可以看出，是两种数据结构同时配合使用的结果。
 
-由于是python，快速排序10行搞定，归并排序压缩为20行搞定。
+这个星期，一共在leetcode 做题，大约180 道，开始感觉到，代码之间的关系。
+也就是说，**他山之石可以功玉。代码似曾相识，结构可以复用，框架可以参考，**
+当看到老师讲快排的代码，最佳实现时，
+立马感觉到，这个代码的结构与移动零，删除排序数组中的重复项，有些相似。talk is cheap show me the code
+```
+class Solution:
+    def qsort(self,arr,begin,end):
+        if begin>=end:return
+        def findp(arr,ss,ee):
+            counter =ss
+         
+            for i in range(ss,ee):      #循环
+                if arr[i]<arr[ee]:      #判断
+                    arr[i],arr[counter]=arr[counter],arr[i] #交换
+                    counter+=1          #向右走一步
+                    
+            arr[ee],arr[counter]=arr[counter],arr[ee]
+            return counter
+看移动零的代码,思想是相同的。
+class Solution:
+    def moveZeroes(self, nums: List[int]) -> None:
+        slow = 0
+        for fast in range(len(nums)):   #循环
+            if nums[fast] != 0  :       #判断
+                nums[slow],nums[fast]=nums[fast],nums[slow] #交换
+                slow += 1               #向右走一步
 
 ```
-#insert sort
+
+**所以，老师说的，过遍数，是对的，看优秀的代码，是对的。**
+
+由于是python，快速排序10行搞定，归并排序压缩为20行搞定。在下面深处
+
+```
+#insert sort  
 class Solution:
 
     def inssort(self,nums):
@@ -29,10 +60,8 @@ print(a)
 '''
 #bubble sorted
 class Solution:
-
     def bubble(self,nums):
         size=len(nums)
-
         for i in range(size):
             for j in range(size-1,i,-1):
                 if nums[j]<nums[j-1]:
@@ -45,20 +74,15 @@ print(a)
 
 #select sorted
 class Solution:
-
     def select(self,nums):
         size=len(nums)
-
         for i in range(size):
-
             smallindex=i
             #for j in range(size-1,i,-1):
             for j in range(i+1,size):
                 if nums[j]<nums[smallindex]:
                     smallindex=j
             nums[smallindex],nums[i]=nums[i],nums[smallindex] # 一行搞定，最佳实践
-
-
 cc=Solution()
 a=[2,3,6,5,1,7,7,7,66,88,44,34]
 cc.select(a)
@@ -101,10 +125,10 @@ class Solution:
     def qsort(self,arr,begin,end):
         if begin>=end:return
         
-        def findp(arr,ss,ee):
-            counter =ss
-            #p=ee
-            for i in range(ss,ee):
+        def findp(arr,start,ee):
+            counter =start
+            #pivot=ee
+            for i in range(start,ee):
                 if arr[i]<arr[ee]:
                     arr[i],arr[counter]=arr[counter],arr[i]
                     counter+=1
@@ -121,7 +145,7 @@ cc.qsort(aa,0,len(aa)-1)
 print(aa)
 
 
-#快速排序的，第三种写法，10行搞定
+#快速排序的，第三种写法，10行搞定，需要额外空间
 class Solution:
     def qsort(self, arr):
         if len(arr) <= 1:return arr
@@ -181,7 +205,7 @@ aa=[440, 551, 2, 3444444, 5, 6, 107, 70909, 79,99, 107, 7, 799,99, 134, 44,123,2
 cc.mergesort(aa,0,len(aa)-1)
 print(aa)
 
-#归并排序，压缩为20行，python 3
+#归并排序，压缩为20行，python 3，用到了，多个值，一次性赋值第8行代码
 class Solution:
 	def mergesort(self, arr, begin, end):
 		if begin >= end: return
