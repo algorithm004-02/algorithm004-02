@@ -227,3 +227,6 @@ class Solution:
 		self.mergesort(arr, mid + 1, end)
 		merge(arr, begin, mid, end)
 ```
+又看视频，位运算和排序和LRU. 做了几道题。 终于理解了一些位运算。
+
+
