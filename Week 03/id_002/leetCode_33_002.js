@@ -15,7 +15,65 @@ var search = function(nums, target) {
     return 0;
 };
 
+/**
+ * @param {number[]} nums
+ * @param {number} target
+ * @return {number}
+ */
+var search2 = function(nums, target) {
+    let roatIndex = getRoatIndex(nums);
 
+    // nums为空
+    if (roatIndex < 0) return roatIndex;
+    
+    let le = 0;
+    let ri = nums.length - 1;
+
+    //取数组的两端 规避数组长度为1或2边界
+    if (nums[ri] === target) return ri;
+    if (nums[le] === target) return le;
+    if (le === ri) return -1;
+    
+    //规避有序的数组（默认）
+    if (nums[le] > nums[ri]) {
+        if (nums[roatIndex] === target) return roatIndex;
+        if (target > nums[0]) ri = roatIndex - 1;   
+        if (target < nums[0]) le = roatIndex;
+    }
+    return binarySearch(le, ri);  
+
+    function getRoatIndex(nums) {
+        let len = nums.length;
+        let left = 0;
+        let right = len - 1;
+    
+        while(left <= right) {
+            let mid = (left + right) / 2 | 0;
+            
+            if (nums[mid] === nums[right]) return mid;
+            
+            if (nums[mid] > nums[right]) {
+                left = mid + 1;
+            } else {
+                right = mid;
+            } 
+        }
+        
+        return -1;
+    }
+    function binarySearch(le, ri) {
+        while(le < ri) {
+            let mid = (le + ri) / 2 | 0;
+            if (nums[mid] < target) {
+                le = mid + 1;
+            } else {
+                ri = mid;
+            }
+        }
+        
+        return nums[ri] === target ? ri : -1;
+    }
+};
 /**
  * 第三种精简解法
  * @param {number[]} nums
@@ -28,11 +86,6 @@ var search3 = function(nums, target) {
     
     while(left < right) {
         let mid = (left + right) / 2 | 0;
-        // 此处代码的意图 是判定二分查找的四种状态 确定区间二分查找
-        // 1. target and mid 在旋转节点左半端(较大的一端)
-        // 2. target and mid 在旋转节点右半端(较小的一端)
-        // 3. target 在旋转节点右半端 mid在左半端
-        // 3. target 在旋转节点做半端 mid在右半端
         let num = (nums[mid] < nums[0]) === (target < nums[0]) ? nums[mid] : target < nums[0] ? -Number.POSITIVE_INFINITY : Number.POSITIVE_INFINITY;
         if (num < target) 
             left = mid + 1;

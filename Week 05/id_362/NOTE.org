@@ -1,0 +1,109 @@
+* 路径记数问题 UniquePaths
+  一个机器人位于m*n网格的左上角，机器人每次只能向下或向右移动一步。机器人试图到达网格右下角。总共有多少条不同路径。
+  
+  以 4*4 的网格为例，问从start到end一共有几种走法。
+  | start |   |   |     |
+  |       |   |   |     |
+  |       |   |   |     |
+  |       |   |   | end |
+
+** 动态规划
+   可以使用动态规划来解决该问题。同时动态规划又包含两种分析方法：自顶向下，自底向上。
+
+*** 自底向上
+    使用自底向上的方法即_从后往前_推导。首先我们找“最近最简子问题”，因为每次只能向右或向下移动一步，所以要到达end，必定是从end左侧一格或者end上方一格移动到达end的。而且从这两格到达end每个都只有一种走法，如下图所示：
+    |   |   |   |     |
+    |   |   |   |     |
+    |   |   |   |   1 |
+    |   |   | 1 | end |
+
+    以此类推，end所在的行和列要到达end全都只有一条路径：
+    |   |   |   |   1 |
+    |   |   |   |   1 |
+    |   |   |   |   1 |
+    | 1 | 1 | 1 | end |
+  
+    然后我们就来计算end的左上角的一格，记作i，到end有几条路径。要从i到达end，只有两种走法，要么向右走一格到达i+1，要么向下走一格到达j+1。因此i到达end的路径一共有[i+1][j] + [i][j+1]条，即1+1=2条。
+    |   |   |   |   1 |
+    |   |   |   |   1 |
+    |   |   | i |   1 |
+    | 1 | 1 | 1 | end |
+
+    最终结果为：[0][0] = 20
+    | 20 | 10 | 4 |   1 |
+    | 10 |  6 | 3 |   1 |
+    |  4 |  3 | 2 |   1 |
+    |  1 |  1 | 1 | end |
+
+    根据上方的步骤我们便可得出从i出发到达end路径条数的递推公式为：dp[i][j] = dp[i+1][j] + dp[i][j+1]
+
+    #+begin_src swift
+      // BottomUp 时间复杂度O(m * n), 空间复杂度 O(m * n)
+      class Solution {
+          func uniquePaths(_ m: Int, _ n: Int) -> Int {
+              var dp = [[Int]](repeating: [Int](repeating: 1, count: m), count: n)
+              for i in (0..<n-1).reversed() {
+                  for j in (0..<m-1).reversed() {
+                      dp[i][j] = dp[i+1][j] + dp[i][j+1]
+                  }
+              }
+              return dp[0][0]
+          }
+      }
+    #+end_src
+
+    还可以从前往后推
+    #+begin_src swift
+      class Solution {
+          // TopBottom. Time complexity: O(m * n) Space complexity: O(m * n)
+          func uniquePaths(_ m: Int, _ n: Int) -> Int {
+              var dp: [[Int]] = [[Int]](repeating: [Int](repeating: 1, count: m), count: n)
+              for i in 1..<n {
+                  for j in 1..<m {
+                      dp[i][j] = dp[i-1][j] + dp[i][j-1]
+                  }
+              }
+              return dp[n-1][m-1]
+          }
+      }
+    #+end_src
+    
+    以上两种方法中我们均使用二维数组来存储所有的中间状态，要求到达第i格所有不同路径，其实我们只需要将i所在行和i的上一行存起来就也可以求出到达i的所有路径。
+    #+begin_src swift
+      class Solution {
+          // TopBottom Time complexity: O(m * n), Space complexity: O(2 * m)
+          func uniquePaths(_ m: Int, _ n: Int) -> Int {
+              var pre = [Int](repeating: 1, count: m)
+              var cur = [Int](repeating: 1, count: m)
+              for i in 1..<n {
+                  for j in 1..<m {
+                      cur[j] = cur[j-1] + pre[j]
+                  }
+                  pre = cur
+              }
+              return cur[m-1]
+
+          }
+      }
+    #+end_src
+    状态如下图所示：
+                j-1  j
+    pre -> | 1 | 1 | 1 | 1 |
+    cur -> | 1 | 2 | 3 | 4 |
+    
+    在上述优化的基础上，我们可以继续对空间复杂度进行优化，只需要存一行数据也可以求出最终解。
+    #+begin_src swift
+      class Solution {
+          // 只记录一行数据，Time complexity: O(m * n), Space complexity: O(m)
+          func uniquePaths(_ m: Int, _ n: Int) -> Int {
+              var dp = [Int](repeating: 1, count: m)
+              for i in 1..<n {
+                  for j in 1..<m {
+                      dp[j] += dp[j-1]
+                  }
+              }
+              return dp[m-1]
+          }
+      }
+    #+end_src
+
