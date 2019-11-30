@@ -68,3 +68,34 @@ function quickSort(arr, begin = 0, end = arr.length - 1) {
         return counter;
     }
 }
+
+// 5. 归并排序
+function mergeSort(array, left = 0, right = array.length - 1) {
+    if (left >= right) return;
+
+    let mid = (left + right) >> 1;
+
+    mergeSort(array, left, mid);
+    mergeSort(array, mid + 1, right);
+    merge(array, left, mid, right);
+
+    function merge(array, left, mid, right) {
+        let i = left;
+        let j = mid + 1;
+        let k = 0;
+        let tmp = [];
+    
+        while(i <= mid && j <= right) {
+            tmp[k++] = array[i] <= array[j] ? array[i++] : array[j++];
+        }
+    
+        while(i <= mid) temp[k++] = array[i++];
+        while(j <= right) temp[k++] = array[j++];
+    
+        for(let p = 0; p < temp.length; p ++) {
+            array[left + p] = temp[p];
+        }
+    }
+}
+
+// 6. 堆排序
