@@ -76,6 +76,40 @@
     ```
 
 ## DP方程
+- [70. 爬楼梯](https://leetcode-cn.com/problems/climbing-stairs/submissions/)
+```
+    爬楼梯相关DP方程及变形情况
+    
+    1. 1, 2 一步两步
+        DP
+            a. 重复子问题
+                f[i] = f[i - 1] + f[i - 2]
+            b. 状态数组定义
+                f[i]
+            c. DP方程
+                f[i] = f[i - 1] + f[i - 2]
+
+    2. 1,2,3 一步两步三步
+        DP
+            a. 重复子问题
+                f[i] = f[i - 1] + f[i - 2] + f[i - 3]
+            b. 状态数组
+                f[i]
+            c. DP方程
+                 f[i] = f[i - 1] + f[i - 2] + f[i - 3]
+
+    3. x1, x2, xm... k步
+        DP
+            a. 重复子问题
+                for j Range(len(m)) :
+                    a[i] += a[i - m[j]]
+            b. 定义状态数组
+                f[i]
+            c. DP方程
+                for j range(len(m))
+                    f[i] += f[i - m[j]]
+```
+
 - [120. 三角形最小路径和](https://leetcode-cn.com/problems/triangle/description/)
 ```
     1. 暴力
@@ -250,7 +284,6 @@ DP:
 | [714. 买卖股票的最佳时机含手续费](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/) | | JavaScript |
 | [32. 最长有效括号](https://leetcode-cn.com/problems/longest-valid-parentheses/) | DP | JavaScript |
 | [64. 最小路径和](https://leetcode-cn.com/problems/minimum-path-sum/) | DP | JavaScript |
-| [72. 编辑距离](https://leetcode-cn.com/problems/edit-distance/) | DP | JavaScript |
 | [91. 解码方法](https://leetcode-cn.com/problems/decode-ways/) | DP | JavaScript |
 | [221. 最大正方形](https://leetcode-cn.com/problems/maximal-square/) | | JavaScript |
 | [363. 矩形区域不超过 K 的最大数值和](https://leetcode-cn.com/problems/max-sum-of-rectangle-no-larger-than-k/) | | JavaScript |
@@ -261,6 +294,7 @@ DP:
 | [647. 回文子串](https://leetcode-cn.com/problems/palindromic-substrings/) | | JavaScript |
 | [76. 最小覆盖子串](https://leetcode-cn.com/problems/minimum-window-substring/) | | JavaScript |
 | [312. 戳气球](https://leetcode-cn.com/problems/burst-balloons/) | | JavaScript |
+| [746. 使用最小花费爬楼梯](https://leetcode-cn.com/problems/min-cost-climbing-stairs/) | | JavaScript |
 | 高级 DP| 标签 | 实现 |
 | [279. 完全平方数](https://leetcode-cn.com/problems/perfect-squares/submissions/) | | JavaScript |
 | [72. 编辑距离](https://leetcode-cn.com/problems/edit-distance/) | 重点DP | JavaScript |
