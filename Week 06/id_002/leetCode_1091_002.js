@@ -40,6 +40,7 @@ var shortestPathBinaryMatrix = function(grid) {
 };
 
 /**
+ * A* 
  * @param {number[][]} grid
  * @return {number}
  */
@@ -48,27 +49,28 @@ var shortestPathBinaryMatrix = function(grid) {
     if (grid[0][0] || grid[n - 1][n - 1]) return - 1;
     if (n <= 2) return n;
 
-
+    let visited = new Set();
     let priority = new PriorityQueue();
-    let node = [0, 0, 1];
-    priority.push(node, getHeuristic(node));
+    priority.push([0, 0, 1], 0);
 
     while(priority.size()) {
-        let [i, j, dep]= priority.pop();
+        let [i, j, dep] = priority.pop();
         if (i === n - 1 && j === n - 1) return dep;
 
-        for (let [x, y] of succFun(i, j)) {
-            priority.push([x, y, dep + 1], getHeuristic(x, y));
-            grid[x][y] = 1;
+        let key = [i, j].join(',')
+        if (visited.has(key)) continue;
+
+        visited.add(key);
+        for (let node of succNode(i, j)) {
+            let p = dep + 1 + getHuristic(...node);
+            priority.push([...node, dep + 1, p], p);
         }
-
-        return -1;
     }
-
+    
     return -1;
 
-    function * succFun(i, j) {
-        let dir = [[0, 1], [1, 0], [0, -1], [-1, 0], [1, -1], [-1, 1], [-1, -1], [1, 1]]; 
+    function * succNode(i, j) {
+        let dir = [[0, 1], [1, 0], [0, -1], [-1, 0], [1, -1], [-1, 1], [-1, -1], [1, 1]];  
 
         for(var [dx, dy] of dir) {
             let x = i + dx;
@@ -76,64 +78,50 @@ var shortestPathBinaryMatrix = function(grid) {
 
             if (x < 0 || x >= n || y < 0 || y >= n) continue;
             if (grid[x][y] === 1) continue;
+            
+            let node = [x, y];
+            let key = node.join(',');
 
-            yield [x, y];
+            yield node;
         }
     }
-    function getHeuristic(x, y) {
-        return Math.max(Math.abs(n - 1 - x), Math.max(n - 1 -y));
+
+    function getHuristic(i, j) {
+        let n = grid.length;
+        return Math.max(Math.abs(n - i), Math.abs(n - j));
     }
 };
 
-/**
- * @param {number[][]} grid
- * @return {number}
- */
-var shortestPathBinaryMatrix = function(grid) {
-    let n = grid.length;
-    if (grid[0][0] || grid[n - 1][n - 1]) return - 1;
-    if (n <= 2) return n;
+function PriorityQueue() {
+    let data = [];
 
-    let dir = [[0, 1], [1, 0], [0, -1], [-1, 0], [1, -1], [-1, 1], [-1, -1], [1, 1]];  
-    
-    let queue = [[0, 0, 2]];
-    grid[0][0] = 1;
+    return {push, pop, size};
+    function push(value, priority = 0) {
+        data.push({
+            value,
+            priority
+        });
+    }
 
-    while(queue.length) {
-        queue.sort(sort);
-        
-        let tmp = [];
-        for (let [i, j, dep] of queue) {
-            for(var [dx, dy] of dir) {
-                let x = i + dx;
-                let y = j + dy;
+    function pop() {
+        let index = 0;
+        let min = Infinity;
 
-                if (x < 0 || x >= n || y < 0 || y >= n) continue;
-                if (grid[x][y] === 1) continue;
-
-                if (x === n - 1 && y === n - 1) return dep
-                
-                grid[x][y] = 1;
-                tmp.push([x, y, dep + 1])
+        for (var i = 0; i < data.length; i ++) {
+            let priority = data[i].priority;
+            if (Math.min(priority, min) === priority) {
+                min = priority;
+                index = i; 
             }
         }
 
-        queue = tmp;
+        return data.splice(index, 1)[0].value;
     }
 
-    return -1;
-
-    function sort(a, b) {
-        let [x1, y1] = a;
-        let [x2, y2] = b;
-         
-        let m = n - 1;
-        let dis1 = Math.max(Math.abs(m - x1), Math.abs(m - y1));
-        let dis2 = Math.max(Math.abs(m - x2), Math.abs(m - y2));
-
-        return dis1 - dis2;
+    function size(){
+        return data.length;
     }
-};
+}
 
 function PriorityQueue() {
     let data = [];
