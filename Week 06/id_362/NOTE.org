@@ -1,0 +1,94 @@
+* Trie的设计实现 
+  字典树（Trie）又叫前缀树（Prefix Trie），顾名思义是一种树形结构，专门用来处理字符串匹配的问题，用来解决在一组字符串集合中快速查找某个字符串的问题。树中的每个节点存储一个字符，从跟节点到某个叶子结点的一条路径构成一个单词。
+
+** 为什么要使用Trie
+
+   - 在特定场景下，查找元素的虽坏情况的时间复杂度更优。
+   - 相比哈希表，Trie不需要考虑键碰撞
+   - Trie结构在默认情况下就可以是按字符顺序排列的
+
+** 如何实现Trie
+
+   Trie主要有两个操作，一个是 *使用字符串结合构造Trie* ，还有一个就是 *在Trie中查找一个字符串* 。我们可以对Trie作如下抽象定义：
+
+   #+begin_src swift
+    protocol TrieADT {
+        /// 插入一个单词
+        func insert(_ word: String)
+        /// 查找一个单词
+        func search(_ word: String) -> Bool
+        /// 是否存在前缀
+        func starts(with prefix: String) -> Bool
+    }
+   #+end_src
+
+   要实现这些操作，我们首先要解决存储数据的问题，对于树形结构来说，我们首先要设计实现节点。
+
+*** 节点
+    
+    这里介绍一种经典的实现方式，借助散列表的思想，通过字符与下标一一对应的数组，来存储自节点。
+    
+    #+begin_src swift
+      class TrieNode {
+          // 该节点存储的数据
+          let data: Character
+          // 该节点的子节点
+          var children: [Character: TrieNode] = [:]
+          var isEnd: Bool = false
+          // 初始化方法
+          init(data: Character) {
+              self.data = data
+          }
+      }
+    #+end_src
+    当我们在Trie中查找字符串的时候，可以通过字符的ACSII码减去'a'的ASCII码来快速得到对应字符的下标，实现O(1)的时间复杂度。
+
+    定义好了TrieNode，就可以实现我们的TrieADT了。
+    
+*** 插入 
+    理解了Trie的核心思想，插入元素的算法就很直接了，代码如下
+    #+begin_src swift
+      func insert(_ word: String) {
+          if word.isEmpty { return }
+          var node: TrieNode? = root
+          for char in word.lowercased() {
+              if node?.children[char] == nil {
+                  node?.children[char] = TrieNode(char)
+              }
+              node = node?.children[char]
+          }
+          node?.isEnd = true
+      }
+    #+end_src
+    
+    首先从Trie的跟节点开始，依次遍历单词的字母，如果数中存在这个字母继续检查下一层，如果不存在这个字母，则生成一个新的节点存入Trie。当把一个单词完整插入之后，将叶子结isEnd置为true。
+
+*** 搜索
+    搜索算法很直观，遍历单词里的字符，在Trie里进行查找，如果找到根节点，表明树里存在要查找的单词。
+    #+begin_src swift
+      func search(_ word: String) -> Bool {
+          if word.isEmpty { return false }
+          var node: TrieNode? = root
+          for char in word.lowercased() {
+              if node?.children[char] == nil {
+                  return false
+              }
+              node = node?.children[char]
+          }
+          return node?.isEnd ?? false
+      }
+    #+end_src
+
+    有了Trie，还可以判断树里是否有单词有特定的前缀:
+    #+begin_src swift
+      func starts(with prefix: String) -> String {
+          if prefix.isEmpty { return false }
+          var node: TrieNode? = root
+          for char in prefix.lowercase() where node != nil {
+              node = node?.children[char]
+          }
+          return node != nil
+      }
+    #+end_src
+
+
