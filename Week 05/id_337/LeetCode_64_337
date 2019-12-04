@@ -1,0 +1,40 @@
+class Solution {
+    public int minPathSum(int[][] grid) {
+        int length=grid[0].length;
+        int height=grid.length;
+        //行走步数
+        int steps=length+height-2;
+        int[][][] temp=new int[steps][length][height];
+        //初始化
+        if(length==1&&height==1){
+            return grid[0][0];
+        }
+        if(length>1){
+            temp[0][1][0]=grid[0][0]+grid[0][1];
+        }
+        if(height>1){
+            temp[0][0][1]=grid[0][0]+grid[1][0];
+        }
+        //j为横坐标索引，k为纵坐标索引
+        for(int i=1;i<temp.length;i++){
+            for(int j=0;j<length;j++){
+                int k=i-j+1;
+                if(k<height&&k>=0){
+                    //如果此点是上边界
+                    if(k==0){
+                        temp[i][j][k]=temp[i-1][j-1][k]+grid[k][j];
+                    }
+                    //如果是左边界
+                   else if(j==0){
+                        temp[i][j][k]=temp[i-1][j][k-1]+grid[k][j];
+                    }
+                   else {
+                        //如果不是边界
+                        temp[i][j][k] = Math.min(temp[i - 1][j - 1][k], temp[i - 1][j][k - 1]) + grid[k][j];
+                    }
+                }
+            }
+        }
+        return temp[steps-1][length-1][height-1];
+    }
+}
