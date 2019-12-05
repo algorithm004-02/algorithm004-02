@@ -1,0 +1,91 @@
+package com.phoenix.learn.test;
+
+import java.util.Hashtable;
+
+/**
+ * create by zhr on 2019/12/2
+ * Description：
+ */
+public class LRUCacheByDoubleLinkedHashmap {
+    class DLinkedHashNode{
+        int key;
+        int value;
+        DLinkedHashNode pre;
+        DLinkedHashNode next;
+    }
+
+    private Hashtable<Integer, DLinkedHashNode> cache = new Hashtable<Integer, DLinkedHashNode>();
+    private int size;
+    private int capacity;
+    private DLinkedHashNode head;
+    private DLinkedHashNode tail;
+
+    public LRUCacheByDoubleLinkedHashmap(Integer capacity){
+        this.size = 0;
+        this.capacity = capacity;
+        head = new DLinkedHashNode();
+        tail = new DLinkedHashNode();
+        head.pre = tail;
+        tail.next = head;
+    }
+
+
+
+   private void addNode(DLinkedHashNode node){
+        node.pre = head;
+        node.next = head.next;
+
+        head.pre.next = node;
+        head.next = node;
+
+   }
+
+   private void removeNode(DLinkedHashNode node){
+
+        DLinkedHashNode pre = node.pre;
+        DLinkedHashNode next = node.next;
+
+        pre.next = next;
+        next.pre = pre;
+   }
+
+   private void moveToHead(DLinkedHashNode node){
+        removeNode(node);
+        addNode(node);
+   }
+
+   private DLinkedHashNode popTail(){
+        DLinkedHashNode res = tail.pre;
+        removeNode(res);
+        return res;
+   }
+
+   public int get(int key){
+        DLinkedHashNode node = cache.get(key);
+        if (node == null) return -1;
+        moveToHead(node);
+        return node.value;
+   }
+
+
+   public void put(int key,int value){
+        DLinkedHashNode node = cache.get(key);
+       if (node == null) {
+           DLinkedHashNode newNode = new DLinkedHashNode();
+           newNode.key = key;
+           newNode.value = value;
+           cache.put(key,newNode);
+           addNode(node);
+
+           ++size;
+           if (size > capacity) {
+               DLinkedHashNode tail = popTail();
+               cache.remove(tail.key);
+               --size;
+           }
+       }else{
+           node.value = value;
+           moveToHead(node);
+       }
+   }
+}
