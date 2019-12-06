@@ -14,20 +14,40 @@
 
 '''
 
-class Solution:
-    def reverseOnlyLetters(self, S: str) -> str:
-        left,r,s=0,len(S)-1,list(S)
 
-        while left<r:
-            if not s[left].isalpha(): left+=1
-            elif not s[r].isalpha(): r-=1
-            else:
-                s[left],s[r]=s[r],s[left]
-                left+=1
-                r-=1
-        return "".join(s)
+class Solution:
+	def reverseOnlyLetters(self, S: str) -> str:
+		left, r, s = 0, len(S) - 1, list(S)
+
+		while left < r:
+			if not s[left].isalpha():
+				left += 1
+			elif not s[r].isalpha():
+				r -= 1
+			else:
+				s[left], s[r] = s[r], s[left]
+				left += 1
+				r -= 1
+		return "".join(s)
+
 
 '''
+
+国际
+class Solution:
+    def reverseOnlyLetters(self, S):
+        S, i, j = list(S), 0, len(S) - 1
+        while i < j:
+            if not S[i].isalpha():
+                i += 1
+            elif not S[j].isalpha():
+                j -= 1
+            else:
+                S[i], S[j] , i, j  = S[j], S[i],i + 1, j - 1
+                #i, j = i + 1, j - 1
+        return "".join(S)
+
+
 class Solution:
     def reverseOnlyLetters(self, S: str) -> str:
         s=list(S)

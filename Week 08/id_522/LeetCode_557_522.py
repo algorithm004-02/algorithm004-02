@@ -33,6 +33,16 @@ class Solution:
         
         
         
-        
+>>> from timeit import timeit
+>>> setup = 's = "Let\'s take LeetCode contest"'
+>>> statements = ("' '.join(s.split()[::-1])[::-1]",
+	          "' '.join(x[::-1] for x in s.split())",
+	          "' '.join([x[::-1] for x in s.split()])")
+>>> for stmt in statements:
+        print ' '.join('%.2f' % timeit(stmt, setup) for _ in range(5)), 'seconds for:', stmt
+
+0.79 0.78 0.80 0.82 0.79 seconds for: ' '.join(s.split()[::-1])[::-1]
+2.10 2.14 2.08 2.06 2.13 seconds for: ' '.join(x[::-1] for x in s.split())
+1.27 1.26 1.28 1.28 1.26 seconds for: ' '.join([x[::-1] for x in s.split()])       
         
 '''
