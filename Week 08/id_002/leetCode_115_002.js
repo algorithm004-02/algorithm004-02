@@ -55,5 +55,3 @@ var numDistinct = function(s, t) {
 
     return dp[tLen - 1][sLen - 1];
 };
-
-
