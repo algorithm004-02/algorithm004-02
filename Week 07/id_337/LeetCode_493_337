@@ -1,0 +1,29 @@
+class Solution {
+public:
+    vector<int> tmp;
+    int reversePairs(vector<int>& nums) {
+        int n = nums.size();
+        tmp.resize(n);
+        return merge_sort(nums, 0, n);
+    }
+    int merge_sort(vector<int>& nums, int l, int r) {
+        if (r - l <= 1) return 0;
+        int mid = l + (r - l) / 2;
+        int count = merge_sort(nums, l, mid) + merge_sort(nums, mid, r);
+        int j = mid;
+        for (int i = l; i < mid; ++i) {
+            while (j < r && nums[i] / 2.0 > (double)nums[j]) ++j;
+            count += j - mid;
+        }
+        int pos = l, l1 = l, l2 = mid;
+        while (l1 < mid && l2 < r) {
+            if (nums[l1] < nums[l2]) {
+                tmp[pos++] = nums[l1++];
+            }else tmp[pos++] = nums[l2++];
+        }
+        while (l1 < mid) tmp[pos++] = nums[l1++];
+        while (l2 < r) tmp[pos++] = nums[l2++];
+        for (int i = l; i < r; ++i) nums[i] = tmp[i];
+        return count;
+    }
+};
