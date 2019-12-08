@@ -1,3 +1,6 @@
+import java.util.HashMap;
+import java.util.Map;
+
 class SumTwo {
     /**
      * 给定一个整数数组 nums 和一个目标值 target，
@@ -8,7 +11,7 @@ class SumTwo {
      * @param target
      * @return
      */
-    public int[] twoSum(int[] nums, int target) {
+    public int[] twoSum1(int[] nums, int target) {
         // 额。。暴力求接法。。
         for (int i = 0; i < nums.length; i++) {
             for (int j = i + 1; j < nums.length; j++) {
