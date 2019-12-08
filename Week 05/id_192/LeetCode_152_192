@@ -1,0 +1,27 @@
+class Solution {
+    public int maxProduct(int[] nums) {
+        if(nums == null || nums.length == 0){
+            return 0;
+        }
+        if(nums .length == 1){
+            return nums[0];
+        }
+        int minValue = nums[0]; 
+        int maxValue = nums[0];
+        int res = nums[0];
+
+        for(int i = 1 ; i < nums.length ; i ++ ){
+            if(nums[i] < 0 ){//必须先判断该值的正负，同时决定了minValue maxValue的取值。必须保证minv 和maxv的正确性才能保证乘机后的正确性
+                int tmp = minValue;
+                minValue = maxValue;
+                maxValue = tmp;
+            }
+
+            minValue = Math.min(minValue*nums[i],nums[i]);
+            maxValue = Math.max(maxValue*nums[i],nums[i]);
+            
+            res = Math.max(res,maxValue);
+        }
+        return res;
+    }
+}

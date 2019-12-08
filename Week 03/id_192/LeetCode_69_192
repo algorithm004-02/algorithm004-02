@@ -1,0 +1,36 @@
+class Solution {
+    public int mySqrt(int x) {
+        
+        if(x == 0){ return 0;}
+        if(x > Integer.MAX_VALUE){ return -1;}
+        
+        int left = 0;
+        int right = x;
+        while(left <= right){
+            int mid = (left + right) >>> 1;              
+            if(mid * mid == x){
+               return mid;
+            }                                  
+            if( mid * mid > x){
+                right = mid - 1 ;
+            }else{
+                left = mid + 1;
+            }
+        }
+        return right;
+    }
+    
+
+    public int mySqrt2(int x) {
+        
+        if (x == 0) return 0;
+        double last=0;
+        double res=1;
+        while(res!=last)
+        {
+            last=res;
+            res=(res+x/res)/2;
+        }
+        return (int)res;
+    }
+}
