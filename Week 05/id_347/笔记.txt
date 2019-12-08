@@ -1,0 +1,40 @@
+//人肉递归
+    //找到最近最简单方法，将其拆解成可重复解决的问题
+    //数学归纳法（地址，人肉递归的诱惑）
+    //本质：寻找重复性
+    //
+
+    /**  递归的模板
+     public void recur(int level, int param) {
+
+     // terminator
+     if (level > MAX_LEVEL) {
+     // process result
+     return;
+     }
+
+     // process current logic
+     process(level, param);
+
+     // drill down
+     recur( level: level + 1, newParam);
+
+     // restore current status
+
+     }
+     **/
+
+    //画出，递归树
+    //动态规划，Dynamic programming
+    //求一个最优解。
+    //缓存，淘汰次优的状态
+    //
+    //关紧点
+    //动态规划 和 递归 或者 分值 没有本质上的区别（关键看有无最有的子结构）
+    //共性：找到重复子问题
+    //差异性：最有子结构，中途可以淘汰次优解
+
+    //有无最有子结构
+    //找到重复的子问题
+    //找到下一个节点的
+    //
