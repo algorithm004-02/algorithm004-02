@@ -1,0 +1,68 @@
+public class Trie {
+    private TrieNode root;
+    public Trie() {
+    }
+    public void insert(String words) {
+        TrieNode node = root;
+        for (int i = 0; i < words.length(); i++) {
+            char ch = words.charAt(i);
+            if (!node.containKeyWord(ch)){
+                node.putKeyWord(ch,new TrieNode());
+            }
+            node = node.getKeyWord(ch);
+        }
+        node.setBeEndTotrue();
+    }
+
+    public boolean search(String words) {
+        TrieNode node = searchNode(words,root);     
+        return node != null && node.getBeEnd();
+    }
+
+    public boolean startsWith(String prefix) {
+        TrieNode node = searchNode(prefix,root);
+        return node != null;
+    }
+
+    private  TrieNode searchNode(String words,TrieNode root){
+        TrieNode node = root;
+        for (int i = 0; i < words.length(); i++) {
+            char ch = words.charAt(i);
+            if ( node.containKeyWord(ch)){
+                node = node.getKeyWord(ch);
+            }else{
+                return null;          
+            }           
+        }
+        return node;
+    }
+
+    class TrieNode {
+        private  TrieNode[] nodes;
+        private boolean beEnd;
+        private final int R = 26;
+
+        public TrieNode() {
+            this.nodes = new TrieNode[R];
+            this.beEnd = false;
+        }
+
+        public boolean containKeyWord(char word){
+            return nodes[word - 'a'] != null;
+        }
+
+        public TrieNode getKeyWord(char word){
+            return nodes[word - 'a'];
+        }
+        public void  putKeyWord(char word,TrieNode node){
+            nodes[word - 'a'] = node;
+        }
+        public void setBeEndTotrue(){
+            this.beEnd = true;
+        }
+
+        public boolean getBeEnd(){
+            return this.beEnd;
+        }
+    }
+}
