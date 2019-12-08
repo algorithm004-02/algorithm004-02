@@ -213,3 +213,37 @@ class Solution(object):
 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
 
 ```
+
+
+```
+#=============================
+#快速排序上一种写法的优化，改用快慢指针
+class Solution:
+    def qsort(self,arr,begin,end):
+        if begin>=end:return
+
+        def findp(arr,start,last):
+            #counter =start
+            #pivot=last
+
+            #改用快慢指针
+            slow=start
+
+            for fast in range(start,last):
+                if arr[fast]<arr[last]:
+                    arr[fast],arr[slow]=arr[slow],arr[fast]
+                    slow+=1
+
+            arr[last],arr[slow]=arr[slow],arr[last]
+            return slow
+
+        p=findp(arr,begin,end)
+        self.qsort(arr,begin,p-1)
+        self.qsort(arr,p+1,end)
+
+cc=Solution()
+aa=[440, 551, 2, 3444444, 5, 6, 107, 7, 79,99, 107, 7, 799,99, 134, 44,123,23,3333,66, 88,79999, 134, 44, 65,1,1,79999]
+cc.qsort(aa,0,len(aa)-1)
+print(aa)
+
+```
