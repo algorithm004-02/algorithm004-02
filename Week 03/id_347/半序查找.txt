@@ -1,0 +1,36 @@
+public class Solution {  
+public int search(int A[], int n, int target)   
+    {  
+        int begin = 0;  
+        int end = n-1;  
+        while(begin <= end)  
+        {  
+            int mid = (begin + end)/2;  
+            //判断mid是否为target，如果是，直接返回，如果不是，再判断target是在前半段还是后半段  
+            if(A[mid] == target)  
+            {  
+                return mid;  
+            }  
+            //如果前半段有序  
+            if(A[begin] <= A[mid])  
+            {  
+                //判断target是否在前半段，如果在，则继续遍历前半段，如果不在，则继续遍历后半段  
+                if(A[begin] <= target && target < A[mid])  
+                    end = mid - 1;  
+                else  
+                    begin = mid + 1;  
+            }  
+            //else说明后半段有序  
+            else  
+            {  
+                //判断target是否在后半段，如果在，则继续遍历后半段，如果不在后半段，则继续遍历前半段  
+                if(A[mid] < target && target <= A[end])  
+                    begin = mid + 1;  
+                else  
+                    end = mid - 1;  
+            }  
+        }  
+        return -1;  
+    }  
+
+}
