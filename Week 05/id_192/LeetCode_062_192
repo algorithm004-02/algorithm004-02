@@ -1,0 +1,17 @@
+class Solution {
+    public int uniquePaths(int m, int n) {
+        
+        if(m <= 0 || n <= 0){return 0;}
+        int less = Math.min(m,n);
+        int more = Math.max(m,n);
+        int[] a = new int[less];
+        Arrays.fill(a,1);
+       
+        for(int j = 1 ; j < more ; j ++ ){
+            for(int k = 1 ; k < less ; k ++ ){//使用边数少的，变数多的此时路径已经确定
+                a[k] = a[k] + a[k-1];
+            }
+        }
+        return  a[less - 1];
+    }
+}
