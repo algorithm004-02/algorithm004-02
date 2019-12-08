@@ -13,4 +13,5 @@ func majorityElement(nums []int) int {
 		}
 	}
 	return current
+
 }
