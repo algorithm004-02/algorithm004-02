@@ -1,0 +1,26 @@
+class Solution {
+    public List<List<Integer>> levelOrder(TreeNode root) {
+        
+        List<List<Integer>> list = new ArrayList<>();
+        helper(root,0,list);
+        return list;
+        
+    }
+    
+    private void helper(TreeNode node,int level ,List<List<Integer>> list){
+                 
+        if(node == null) return ;
+        if (list.size() == level)
+            list.add(new ArrayList<Integer>());
+
+         // fulfil the current level
+         list.get(level).add(node.val);
+
+         // process child nodes for the next level
+         if (node.left != null)
+            helper(node.left, level + 1,list);
+         if (node.right != null)
+            helper(node.right, level + 1,list);
+        
+    }
+}
