@@ -1,0 +1,11 @@
+class Solution:
+    def removeDuplicates(self, nums:list):
+       tmp=list(set(nums))
+       print(tmp)
+       return tmp
+
+
+
+Solution1=Solution()
+Solution1.removeDuplicates([1,1,2])
+print(Solution1)
