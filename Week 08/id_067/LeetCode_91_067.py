@@ -1,10 +1,3 @@
-#
-# @lc app=leetcode.cn id=91 lang=python3
-#
-# [91] 解码方法
-#
-
-# @lc code=start
 class Solution(object):
     def numDecodings(self, s):
         """
@@ -49,6 +42,4 @@ class Solution(object):
 
         return dp[len(s) - 1]
 
-        
-# @lc code=end
 
