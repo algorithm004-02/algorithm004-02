@@ -1,6 +1,7 @@
 /** 10. 正则表达式匹配 **/
 
 /**
+ * 
  * @param {string} s
  * @param {string} p
  * @return {boolean}
@@ -14,6 +15,59 @@ var isMatch = function(s, p) {
         return isMatch(s, p.substring(2)) || firstMatch && isMatch(s.substring(1), p);
     } else {
         return firstMatch && isMatch(s.substring(1), p.substring(1));
+    }
+};
+
+/**
+ * 另一种写法
+ * @param {string} s
+ * @param {string} p
+ * @return {boolean}
+ */
+var isMatch = function(s, p) {
+    return dp(0, 0);
+
+    function dp(i, j) {
+        if (j >= p.length) return i === s.length; 
+
+        let first = (i < s.length) && (s[i] === p[j] || p[j] === '.');
+        
+        if (j < p.length - 1 && p[j + 1] === '*') {
+            return dp(i, j + 2) || first && dp(i + 1, j);
+        } else {
+            return first && dp(i + 1, j + 1);
+        }
+    }
+};
+/**
+ * 备忘录（优化）
+ * @param {string} s
+ * @param {string} p
+ * @return {boolean}
+ */
+var isMatch = function(s, p) {
+    // 备忘录
+    let memory = new Map();
+
+    return dp(0, 0);
+
+    function dp(i, j) {
+        if (memory.has(`${i},${j}`)) return memory.get(`${i},${j}`);
+
+        if (j >= p.length) return i === s.length; 
+
+        let first = (i < s.length) && (s[i] === p[j] || p[j] === '.');
+        
+        let ans;
+        if (j < p.length - 1 && p[j + 1] === '*') {
+            ans = dp(i, j + 2) || first && dp(i + 1, j);
+        } else {
+            ans = first && dp(i + 1, j + 1);
+        }
+
+        memory.set(`${i},${j}`, ans);
+
+        return ans;
     }
 };
 
