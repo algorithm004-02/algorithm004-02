@@ -61,5 +61,6 @@
 | [5. 最长回文子串](https://leetcode-cn.com/problems/longest-palindromic-substring/) | 回文串问题 | JavaScript |
 | [10. 正则表达式匹配](https://leetcode-cn.com/problems/regular-expression-matching/) | 字符串 +DP 问题 | JavaScript |
 | [44. 通配符匹配](https://leetcode-cn.com/problems/wildcard-matching/) | 字符串 +DP 问题 | JavaScript |
+| [1143. 最长公共子序列](https://leetcode-cn.com/problems/longest-common-subsequence/)| | JavaScript|
 | [115. 不同的子序列](https://leetcode-cn.com/problems/distinct-subsequences/) | 字符串 +DP 问题 | JavaScript |
 | [205. 同构字符串](https://leetcode-cn.com/problems/isomorphic-strings/) | | JavaScript |
