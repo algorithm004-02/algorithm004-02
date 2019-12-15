@@ -10,9 +10,4 @@ class Solution:
             res <<= 1
             res += n & 1
             n >>= 1
-<<<<<<< HEAD
         return res
-=======
-        return res
-    
->>>>>>> 8fe26f6a4e46679f8d1b1ee01edf8197505ca1be

@@ -19,7 +19,3 @@ class Solution:
             n &= n - 1
             count += 1
         return count
-<<<<<<< HEAD
-=======
-
->>>>>>> 8fe26f6a4e46679f8d1b1ee01edf8197505ca1be
