@@ -1,8 +1,10 @@
+#
+# @lc app=leetcode.cn id=547 lang=python3
+#
 # [547] 朋友圈
-<<<<<<< HEAD
+#
 
-=======
->>>>>>> 8fe26f6a4e46679f8d1b1ee01edf8197505ca1be
+# @lc code=start
 class Solution:
     def findCircleNum(self, M: List[List[int]]) -> int:
         if not M: return 0
@@ -28,3 +30,5 @@ class Solution:
         while p[i] != i:
             x = i; i = p[i]; p[x] = root
         return root
+# @lc code=end
+
