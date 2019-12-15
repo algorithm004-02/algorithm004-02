@@ -2,7 +2,6 @@
 # 删除排序数组中的重复项
 # 1、暴力
 # 2、双指针
-
 class Solution:
     def removeDuplicates(self, nums: List[int]) -> int:
         if len(nums) == 0: return 0
