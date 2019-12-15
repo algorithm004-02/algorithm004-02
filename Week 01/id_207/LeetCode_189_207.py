@@ -20,6 +20,3 @@ class Solution:
         n = len(nums)
         k %= n
         nums[:] = nums[n-k:] + nums[:n-k]
-
-
-

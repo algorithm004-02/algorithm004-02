@@ -11,3 +11,4 @@ class Solution:
             res += n & 1
             n >>= 1
         return res
+    
