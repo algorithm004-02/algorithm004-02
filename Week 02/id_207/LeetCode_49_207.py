@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
 
->>>>>>> 8fe26f6a4e46679f8d1b1ee01edf8197505ca1be
 # [49] 字母异位词分组
 #  思路：
 from collections import defaultdict
@@ -13,9 +10,4 @@ class Solution:
             for c in s:
                 count[ord(c) - ord('a')] += 1
             ans[tuple(count)].append(s)
-        
-<<<<<<< HEAD
         return ans.values()
-=======
-        return ans.values()
->>>>>>> 8fe26f6a4e46679f8d1b1ee01edf8197505ca1be
