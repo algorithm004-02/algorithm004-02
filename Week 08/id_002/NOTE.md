@@ -61,9 +61,9 @@
 | Week08 | 第19课 | 高级动态规划 |
 | :---: | --- | --- |
 | 实战题目| 标签 | 实现 |
-| [爬楼梯](https://leetcode-cn.com/problems/climbing-stairs/) | | JavaScript |
-| [使用最小花费爬楼梯](https://leetcode-cn.com/problems/min-cost-climbing-stairs/) | | JavaScript |
-| [不同路径](https://leetcode-cn.com/problems/unique-paths/) | | JavaScript | 
+| [70.爬楼梯](https://leetcode-cn.com/problems/climbing-stairs/) | | JavaScript |
+| [746.使用最小花费爬楼梯](https://leetcode-cn.com/problems/min-cost-climbing-stairs/) | | JavaScript |
+| [62.不同路径](https://leetcode-cn.com/problems/unique-paths/) | | JavaScript | 
 | [打家劫舍](https://leetcode-cn.com/problems/house-robber/) | | JavaScript | 
 | [最小路径和](https://leetcode-cn.com/problems/minimum-path-sum/) | | JavaScript |
 | [股票买卖](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/) | | JavaScript |
