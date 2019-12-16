@@ -64,8 +64,8 @@
 | [70.爬楼梯](https://leetcode-cn.com/problems/climbing-stairs/) | | JavaScript |
 | [746.使用最小花费爬楼梯](https://leetcode-cn.com/problems/min-cost-climbing-stairs/) | | JavaScript |
 | [62.不同路径](https://leetcode-cn.com/problems/unique-paths/) | | JavaScript | 
-| [打家劫舍](https://leetcode-cn.com/problems/house-robber/) | | JavaScript | 
-| [最小路径和](https://leetcode-cn.com/problems/minimum-path-sum/) | | JavaScript |
+| [198.打家劫舍](https://leetcode-cn.com/problems/house-robber/) | | JavaScript | 
+| [64.最小路径和](https://leetcode-cn.com/problems/minimum-path-sum/) | | JavaScript |
 | [股票买卖](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/) | | JavaScript |
 | [72.编辑距离](https://leetcode-cn.com/problems/edit-distance/) | | JavaScript |
 | [300. 最长上升子序列](https://leetcode-cn.com/problems/longest-increasing-subsequence/) | | JavaScript |
