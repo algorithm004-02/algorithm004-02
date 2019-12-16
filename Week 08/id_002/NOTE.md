@@ -21,6 +21,42 @@
 * [KMP 字符串匹配算法视频](https://www.bilibili.com/video/av11866460?from=search&seid=17425875345653862171)
 * [字符串匹配的 KMP 算法](http://www.ruanyifeng.com/blog/2013/05/Knuth%E2%80%93Morris%E2%80%93Pratt_algorithm.html)
 
+## 题目分类
+### 字符串基础问题
+* [709. 转换成小写字母](https://leetcode-cn.com/problems/to-lower-case/)
+* [58. 最后一个单词的长度](https://leetcode-cn.com/problems/length-of-last-word/)
+* [771. 宝石与石头](https://leetcode-cn.com/problems/jewels-and-stones/)
+* [387. 字符串中的第一个唯一字符](https://leetcode-cn.com/problems/first-unique-character-in-a-string/)
+* [8. 字符串转换整数 (atoi)](https://leetcode-cn.com/problems/string-to-integer-atoi/)
+
+### 字符串操作问题
+* [14. 最长公共前缀](https://leetcode-cn.com/problems/longest-common-prefix/description/)
+* [344. 反转字符串](https://leetcode-cn.com/problems/reverse-string/)
+* [541. 反转字符串 II](https://leetcode-cn.com/problems/reverse-string-ii/)
+* [151. 翻转字符串里的单词](https://leetcode-cn.com/problems/reverse-words-in-a-string/)
+* [557. 反转字符串中的单词 III](https://leetcode-cn.com/problems/reverse-words-in-a-string-iii/)
+* [917. 仅仅反转字母](https://leetcode-cn.com/problems/reverse-only-letters/)
+
+### 字符串异位问题
+* [242. 有效的字母异位词](https://leetcode-cn.com/problems/valid-anagram/)
+* [49. 字母异位词分组](https://leetcode-cn.com/problems/group-anagrams/)
+* [438. 找到字符串中所有字母异位词](https://leetcode-cn.com/problems/find-all-anagrams-in-a-string/)
+
+### 回文词问题
+* [125. 验证回文串](https://leetcode-cn.com/problems/valid-palindrome/)
+* [680. 验证回文字符串 Ⅱ](https://leetcode-cn.com/problems/valid-palindrome-ii/)
+* [5. 最长回文子串](https://leetcode-cn.com/problems/longest-palindromic-substring/)
+
+### 最长子串、子序列问题
+* [1143. 最长公共子序列](https://leetcode-cn.com/problems/longest-common-subsequence/)
+* [72.编辑距离](https://leetcode-cn.com/problems/edit-distance/)
+* [5. 最长回文子串](https://leetcode-cn.com/problems/longest-palindromic-substring/)
+
+### 字符串+DP问题
+* [10. 正则表达式匹配](https://leetcode-cn.com/problems/regular-expression-matching/)
+* [44. 通配符匹配](https://leetcode-cn.com/problems/wildcard-matching/)
+* [115. 不同的子序列](https://leetcode-cn.com/problems/distinct-subsequences/)
+
 ## 实战题目
 | Week08 | 第19课 | 高级动态规划 |
 | :---: | --- | --- |
@@ -42,11 +78,11 @@
 | Week08 | 第20课 | 字符串算法 |
 | :---: | --- | --- |
 | 实战题目| 标签 | 实现 |
-| [709. 转换成小写字母](https://leetcode-cn.com/problems/to-lower-case/) | 字符串基础问题 | JavaScript |
-| [58. 最后一个单词的长度](https://leetcode-cn.com/problems/length-of-last-word/) | 字符串基础问题 | JavaScript |
-| [771. 宝石与石头](https://leetcode-cn.com/problems/jewels-and-stones/) | 字符串基础问题 | JavaScript |
-| [387. 字符串中的第一个唯一字符](https://leetcode-cn.com/problems/first-unique-character-in-a-string/) | 字符串基础问题 | JavaScript |
-| [8. 字符串转换整数 (atoi)](https://leetcode-cn.com/problems/string-to-integer-atoi/) | 字符串基础问题 | JavaScript |
+| [709. 转换成小写字母](https://leetcode-cn.com/problems/to-lower-case/) |  | JavaScript |
+| [58. 最后一个单词的长度](https://leetcode-cn.com/problems/length-of-last-word/) |  | JavaScript |
+| [771. 宝石与石头](https://leetcode-cn.com/problems/jewels-and-stones/) |  | JavaScript |
+| [387. 字符串中的第一个唯一字符](https://leetcode-cn.com/problems/first-unique-character-in-a-string/) |  | JavaScript |
+| [8. 字符串转换整数 (atoi)](https://leetcode-cn.com/problems/string-to-integer-atoi/) |  | JavaScript |
 | [14. 最长公共前缀](https://leetcode-cn.com/problems/longest-common-prefix/description/) | 字符串操作问题 | JavaScript |
 | [344. 反转字符串](https://leetcode-cn.com/problems/reverse-string/) | 字符串操作问题 | JavaScript |
 | [541. 反转字符串 II](https://leetcode-cn.com/problems/reverse-string-ii/) | 字符串操作问题 | JavaScript |
@@ -61,5 +97,6 @@
 | [5. 最长回文子串](https://leetcode-cn.com/problems/longest-palindromic-substring/) | 回文串问题 | JavaScript |
 | [10. 正则表达式匹配](https://leetcode-cn.com/problems/regular-expression-matching/) | 字符串 +DP 问题 | JavaScript |
 | [44. 通配符匹配](https://leetcode-cn.com/problems/wildcard-matching/) | 字符串 +DP 问题 | JavaScript |
+| [1143. 最长公共子序列](https://leetcode-cn.com/problems/longest-common-subsequence/)| | JavaScript|
 | [115. 不同的子序列](https://leetcode-cn.com/problems/distinct-subsequences/) | 字符串 +DP 问题 | JavaScript |
 | [205. 同构字符串](https://leetcode-cn.com/problems/isomorphic-strings/) | | JavaScript |
