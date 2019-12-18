@@ -16,7 +16,7 @@ function bubblesort(arr) {
 function insertionSort(arr) {
     let len = arr.length;
    
-    for (let i = 0; i < len - 1; i ++) {
+    for (let i = 0; i < len; i ++) {
         let cur = i;
 
         while(cur - 1 >= 0 && arr[cur - 1] > arr[cur]) {
