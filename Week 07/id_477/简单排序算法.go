@@ -1,8 +1,8 @@
 package id_477
 
 import "io"
-
-func maopao(nums []int) {
+// 冒泡
+func bubbleSort(nums []int) {
 	if len(nums) == 0 {
 		return
 	}
@@ -12,6 +12,29 @@ func maopao(nums []int) {
 				nums[j], nums[j+1] = nums[j+1], nums[j]
 			}
 		}
+	}
+}
+
+// 选择
+func selectSort(nums []int) {
+	for i:=0;i<len(nums);i++{
+		min:=i
+		for j:=i;j<len(nums);j++{
+			if nums[min]>nums[j]{
+				min = j
+			}
+		}
+		nums[min], nums[i] = nums[i], nums[min]
+	}
+}
+
+// 插入
+func insertSort(nums []int) {
+	for i:=0;i<len(nums);i++{
+		for j:=i;j>=0 && nums[j]<nums[j-1];j--{
+			nums[j]=nums[j-1]
+		}
+		nums[j] = nums[i]
 	}
 }
 
