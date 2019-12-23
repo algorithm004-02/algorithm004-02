@@ -1,10 +1,4 @@
-#
-# @lc app=leetcode.cn id=37 lang=python3
-#
 # [37] 解数独
-#
-
-# @lc code=start
 class Solution:
     def solveSudoku(self, board: List[List[str]]) -> None:
         """
@@ -42,7 +36,3 @@ class Solution:
                 block[b].add(val)
             return False
         backtrack()
-
-
-# @lc code=end
-
