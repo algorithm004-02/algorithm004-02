@@ -58,7 +58,6 @@ function quickSort(arr, begin = 0, end = arr.length - 1) {
         for (let i = begin; i < end; i ++) {
             if (arr[i] < arr[pivot]) {
                 let temp = arr[counter]; arr[counter] = arr[i]; arr[i] = temp;
-
                 counter ++;
             }
         }
@@ -99,3 +98,32 @@ function mergeSort(array, left = 0, right = array.length - 1) {
 }
 
 // 6. 堆排序
+ function heapSort(arr) {
+    let len = arr.length;
+    
+    // 堆化
+    for (let i = (len >> 1) -1; i >= 0; i --) {
+        heapify(arr, len, i);
+    }
+
+    // 取出顶部元素放入 数组尾部， 调整堆
+    for (let i = len - 1; i >= 0; i --) {
+        let temp = arr[0]; arr[0] = arr[i]; arr[i] = temp;
+        heapify(arr, i, 0);
+    }
+}
+
+function heapify(arr, length, i) {
+    let left = 2 * i + 1;
+    let right = 2 * i + 2;
+    let largest = i;
+
+    if (left < length && arr[left] > arr[largest]) largest = left;
+
+    if (right < length && arr[right] > arr[largest]) largest = right;
+
+    if (largest != i) {
+        let temp = arr[i];  arr[i] = arr[largest]; arr[largest] = temp;
+        heapify(arr, length, largest);
+    }
+}
