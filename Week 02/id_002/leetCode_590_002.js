@@ -18,25 +18,28 @@ var postorder = function(root) {
     }
 };
 
+
 /**
- * 非递归后续遍历
  * @param {Node} root
  * @return {number[]}
  */
-var postorder2 = function(root) {
-    let stack = [root];
-    let postOrder = [];
-    
-    while(stack.length > 0) {
+var postorder = function(root) {
+    if (!root) return [];
+
+    let res = [];
+    let stack = [root]; 
+
+    while(stack.length) {
         let node = stack.pop();
-        postOrder.push(node.val);
-        
-        if (!node.children) continue;
-        
-        for(let i = 0; i < node.children.length; i ++) {
-            stack.push(node.children[i]);
+        res.unshift(node.val);
+        let children = node.children; 
+
+
+        for (let i = 0; i < children.length; i ++) {
+            stack.push(children[i]);
         }
     }
-    return postOrder;
+
+    return res;
 };
 

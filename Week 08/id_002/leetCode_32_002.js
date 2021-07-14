@@ -1,7 +1,6 @@
 /**  32. 最长有效括号 **/
 
 // dp
-//      可以尝试压缩空间
 //      a. 重复子问题
 //          if s[i] === '(' 
 //              dp[i] = 0;
@@ -38,26 +37,4 @@ var longestValidParentheses = function(s) {
     }
 
     return maxLen;
-};
-
-/**
- * @param {string} s
- * @return {string}
- */
-var longestPalindrome = function(s) {
-    let n = s.length;
-    let res = "";
-    let dp = Array.from(Array(n), () => Array(n).fill(0));
-
-    for(let i = n - 1; i >= 0; i--) {
-        for (let j = i; j < n; j ++) {
-            dp[i][j] = (s[i] === s[j]) && (j - i < 2 || dp[i + 1][j - 1]);
-
-            if (dp[i][j] && (j - i + 1 > res.length)) {
-                res = s.substring(i, j + 1);
-            }
-        }
-    }
-
-    return res;
 };
